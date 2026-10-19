@@ -1,0 +1,1 @@
+{"name":"cabcount","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","serve":"npx --yes serve public -l 8080"}}

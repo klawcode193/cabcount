@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "name": "CabCount seed data",
+    "compiled": "2026-10-19",
+    "compiled_tz": "America/Los_Angeles",
+    "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
+    "status_values": {
+      "live_unsupervised": "Public rides, at least some cars with no safety monitor",
+      "live_safety_driver": "Public rides, human safety driver in every car",
+      "preparing": "Tesla-confirmed 'Preparations Underway' or permitted, no public riders yet",
+      "testing_sightings": "Vehicles spotted / staged, no Tesla confirmation of a launch",
+      "requested": "No Tesla activity known; readers asking for it (demand signal only)"
+    }
+  },
+  "cities": [
+    {
+      "id": "austin-tx", "city": "Austin", "state": "TX", "country": "US", "lat": 30.2672, "lng": -97.7431,
+      "status": "live_unsupervised", "launched": "2025-06-22", "unsupervised_since": "2026-01",
+      "vehicles": ["Model Y", "Cybercab"], "cybercab": true, "cybercab_public_since": "2026-09-04",
+      "service_area_sq_mi": 264, "service_area_as_of": "2026-08-31",
+      "service_area_history": [
+        {"date": "2025-06-22", "sq_mi": 19}, {"date": "2025-07-14", "sq_mi": 42}, {"date": "2025-08-03", "sq_mi": 90},
+        {"date": "2025-08-26", "sq_mi": 169}, {"date": "2025-10-28", "sq_mi": 243}, {"date": "2026-08-31", "sq_mi": 264, "note": "Teslarati measured ~288"}
+      ],
+      "hours": "6am-midnight (reported 2026-10-17)",
+      "sources": [
+        "https://www.tesla.com/robotaxi",
+        "https://robotracker.app/updates?city_id=1&operator_id=1",
+        "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin",
+        "https://www.teslarati.com/tesla-expands-driverless-robotaxi-geofence-austin/",
+        "https://www.thechargeport.com/robotaxi-tracker",
+        "https://x.com/i/trending/2111316973141315726"
+      ]
+    },
+    {
+      "id": "sf-bay-area-ca", "city": "San Francisco Bay Area", "state": "CA", "country": "US", "lat": 37.7749, "lng": -122.4194,
+      "status": "live_safety_driver", "launched": "2025-07", "vehicles": ["Model Y"], "cybercab": false,
+      "service_area_sq_mi": 1096, "service_area_as_of": "2026-08",
+      "notes": "Runs under a CPUC charter-party (limo) permit TCP0046782-A with a safety driver; Tesla holds only a DMV drivered testing permit. Not listed on tesla.com/robotaxi as an autonomous city. Launch month from 2025 reporting - verify exact day.",
+      "sources": ["https://www.thechargeport.com/robotaxi-tracker", "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin"]
+    },
+    {
+      "id": "dallas-tx", "city": "Dallas", "state": "TX", "country": "US", "lat": 32.7767, "lng": -96.7970,
+      "status": "live_unsupervised", "launched": "2026-04-18", "vehicles": ["Model Y"], "cybercab": false,
+      "cybercab_note": "Empty Cybercabs spotted driving in Dallas 2026-10-03; Tesla AI chief said 'Dallas soon' (Oct 2026). Not confirmed public.",
+      "service_area_sq_mi": 81, "service_area_as_of": "2026-08",
+      "service_area_history": [{"date": "2026-04-18", "sq_mi": 31}, {"date": "2026-08", "sq_mi": 81}],
+      "notes": "City of Dallas memo dates launch April 19, 2026; Tesla says it intends to cover all of Dallas.",
+      "sources": [
+        "https://www.reuters.com/business/autos-transportation/tesla-rolls-out-robotaxis-dallas-houston-2026-04-18/",
+        "https://dallascityhall.com/government/citymanager/Documents/FY25-26%20Memos/Launch%20of%20Tesla%20Robotaxi%20Services.pdf",
+        "https://electrek.co/2026/04/18/tesla-robotaxi-launches-dallas-houston-small-geofences/",
+        "https://x.com/i/trending/2106631460086304926",
+        "https://x.com/i/trending/2108917366755344510"
+      ]
+    },
+    {
+      "id": "houston-tx", "city": "Houston", "state": "TX", "country": "US", "lat": 29.9300, "lng": -95.5900,
+      "status": "live_unsupervised", "launched": "2026-04-18", "vehicles": ["Model Y"], "cybercab": false,
+      "cybercab_note": "Drone video 2026-10-06 showed ~190-200 Cybercabs staged at a Houston fleet lot (Hempstead). Not in public service.",
+      "service_area_sq_mi": 25, "service_area_as_of": "2026-08",
+      "notes": "Zone is NW Harris County (Jersey Village, Willowbrook, FM 1960), ~14 mi NW of downtown.",
+      "sources": [
+        "https://www.axios.com/local/houston/2026/04/21/houston-tesla-robotaxi-service-launch",
+        "https://electrek.co/2026/04/18/tesla-robotaxi-launches-dallas-houston-small-geofences/",
+        "https://x.com/i/trending/2107508327798255762"
+      ]
+    },
+    {
+      "id": "miami-fl", "city": "Miami", "state": "FL", "country": "US", "lat": 25.7617, "lng": -80.1918,
+      "status": "live_unsupervised", "launched": "2026-07-03", "vehicles": ["Model Y"], "cybercab": false,
+      "service_area_sq_mi": 31, "service_area_as_of": "2026-08",
+      "notes": "Unsupervised rides from day one.",
+      "sources": ["https://www.tesla.com/robotaxi", "https://www.thechargeport.com/robotaxi-tracker", "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin"]
+    },
+    {
+      "id": "orlando-fl", "city": "Orlando", "state": "FL", "country": "US", "lat": 28.4312, "lng": -81.3081,
+      "status": "live_unsupervised", "launched": "2026-07-21", "vehicles": ["Model Y"], "cybercab": false,
+      "service_area_sq_mi": 26, "service_area_as_of": "2026-08",
+      "notes": "Zone around Semoran Blvd / Lee Vista Blvd near MCO; no airport terminal, downtown or theme-park pickups.",
+      "sources": ["https://www.tesla.com/robotaxi", "https://www.thechargeport.com/robotaxi-tracker", "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin"]
+    },
+    {
+      "id": "tampa-fl", "city": "Tampa", "state": "FL", "country": "US", "lat": 27.9506, "lng": -82.4572,
+      "status": "live_unsupervised", "launched": "2026-07-21", "vehicles": ["Model Y"], "cybercab": false,
+      "service_area_sq_mi": 24, "service_area_as_of": "2026-08",
+      "notes": "Covers West Tampa and Tampa Heights.",
+      "sources": ["https://www.tesla.com/robotaxi", "https://www.thechargeport.com/robotaxi-tracker", "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin"]
+    },
+    {
+      "id": "phoenix-az", "city": "Phoenix", "state": "AZ", "country": "US", "lat": 33.4484, "lng": -112.0740,
+      "status": "preparing", "launched": null,
+      "notes": "Tesla Q2 2026 deck: 'Preparations Underway', no date. First Responder Interaction Plan filed; ~60 robotaxi-spec Model Ys reported staged.",
+      "sources": ["https://www.thechargeport.com/robotaxi-tracker"]
+    },
+    {
+      "id": "las-vegas-nv", "city": "Las Vegas", "state": "NV", "country": "US", "lat": 36.1699, "lng": -115.1398,
+      "status": "preparing", "launched": null, "permit_date": "2026-08-20", "permitted_vehicles": 5000,
+      "notes": "Nevada Transportation Authority approved up to 5,000 vehicles across Clark County on 2026-08-20; service must start within 120 days of permit issuance (i.e. by roughly mid-Dec 2026). No riders yet as of late Sept 2026.",
+      "sources": ["https://www.thechargeport.com/robotaxi-tracker"]
+    },
+    {
+      "id": "grunheide-de", "city": "Grünheide", "state": "Brandenburg", "country": "DE", "lat": 52.4236, "lng": 13.8197,
+      "status": "testing_sightings", "launched": null,
+      "notes": "Rumor only: mayor reportedly wants autonomous Tesla shuttles on local roads before end of 2026 (X post, 2026-10-17). Treat as unconfirmed.",
+      "sources": ["https://x.com/sebaonwheels/status/2111553813660189014"]
+    }
+  ],
+  "requested_cities_from_x": [
+    {"city": "San Antonio, TX", "url": "https://x.com/TexasroseGirl/status/2111795146408825089", "date": "2026-10-18"},
+    {"city": "Sydney, AU", "url": "https://x.com/Poitda/status/2107360997405294965", "date": "2026-10-06"},
+    {"city": "Denver / Weld County, CO", "url": "https://x.com/KirkB1776/status/2109807223820193906", "date": "2026-10-13"},
+    {"city": "Atlanta, GA", "url": "https://x.com/Substrate_Zer0/status/2109423851553898984", "date": "2026-10-11"},
+    {"city": "Jacksonville, FL", "url": "https://x.com/EwingDawson/status/2111703303738601917", "date": "2026-10-18"},
+    {"city": "North Houston metro, TX", "url": "https://x.com/carolstoreyy/status/2109375281295491422", "date": "2026-10-11"},
+    {"city": "Canada / Toronto", "url": "https://x.com/UPStatsman/status/2111096264914096435", "date": "2026-10-16"},
+    {"city": "South Korea", "url": "https://x.com/w0nbeenlee/status/2112154265187921974", "date": "2026-10-19"}
+  ],
+  "fleet_timeseries_texas_registry": [
+    {"date": "2026-06-02", "total": 42, "note": "state-authorized vehicles (electrive)"},
+    {"date": "2026-09-02", "total": 420, "model_y": 375, "cybercab": 45},
+    {"date": "2026-09-18", "total": 448, "model_y": 390, "cybercab": 58},
+    {"date": "2026-09-21", "total": 476, "model_y": 409, "cybercab": 67},
+    {"date": "2026-10-02", "cybercab": 169},
+    {"date": "2026-10-09", "total": 739, "cybercab": 319, "note": "X news summary of state records"},
+    {"date": "2026-10-16", "total": 803, "model_y": 454, "cybercab": 349, "note": "X news summary of state records"}
+  ],
+  "fleet_sources": [
+    "https://www.thechargeport.com/robotaxi-tracker",
+    "https://x.com/i/trending/2108235573076910328",
+    "https://x.com/i/trending/2111316973141315726"
+  ],
+  "other_metrics": {
+    "unsupervised_miles_cumulative": {"value": "1,000,000+", "date": "2026-09-03", "source": "https://www.thechargeport.com/robotaxi-tracker"},
+    "nhtsa_cybercab_review": {"status": "Audit Query AQ26002 (2026-09-03) escalated to Special Order (2026-09-10); sworn answers due 2026-09-30; no outcome announced as of 2026-10-04", "source": "https://www.thechargeport.com/robotaxi-tracker"}
+  },
+  "existing_trackers_competitors": [
+    "https://www.thechargeport.com/robotaxi-tracker",
+    "https://robotaxitracker.com",
+    "https://robotracker.app",
+    "https://x.com/RobotaxiRadar"
+  ]
+}

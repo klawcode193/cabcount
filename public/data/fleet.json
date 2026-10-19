@@ -1,0 +1,60 @@
+{
+  "updated": "2026-10-19",
+  "basis": "Texas DMV registrations (not confirmed active vehicles)",
+  "sources": [
+    "https://www.thechargeport.com/robotaxi-tracker",
+    "https://x.com/i/trending/2108235573076910328",
+    "https://x.com/i/trending/2111316973141315726"
+  ],
+  "series": [
+    {
+      "date": "2026-06-02",
+      "total": 42,
+      "model_y": null,
+      "cybercab": null,
+      "note": "state-authorized vehicles (electrive)"
+    },
+    {
+      "date": "2026-09-02",
+      "total": 420,
+      "model_y": 375,
+      "cybercab": 45,
+      "note": null
+    },
+    {
+      "date": "2026-09-18",
+      "total": 448,
+      "model_y": 390,
+      "cybercab": 58,
+      "note": null
+    },
+    {
+      "date": "2026-09-21",
+      "total": 476,
+      "model_y": 409,
+      "cybercab": 67,
+      "note": null
+    },
+    {
+      "date": "2026-10-02",
+      "total": null,
+      "model_y": null,
+      "cybercab": 169,
+      "note": null
+    },
+    {
+      "date": "2026-10-09",
+      "total": 739,
+      "model_y": null,
+      "cybercab": 319,
+      "note": "X news summary of state records"
+    },
+    {
+      "date": "2026-10-16",
+      "total": 803,
+      "model_y": 454,
+      "cybercab": 349,
+      "note": "X news summary of state records"
+    }
+  ]
+}
