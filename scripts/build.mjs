@@ -80,7 +80,7 @@ const newsletter = (city = '') => `<section class="card newsletter" id="newslett
 <button class="btn" type="submit">Notify me</button><p class="msg small"></p></form></section>`;
 const sponsor = `<aside class="card sponsor"><span class="small muted">SPONSOR</span><h3>Sponsor CabCount</h3><p>Reach Robotaxi-curious readers every week. <a href="/about.html#sponsor">Learn more</a></p><!-- SPONSOR SLOT PLACEHOLDER --></aside>`;
 const foot = (scripts = '') => `<footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
-<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@Beam42" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>${scripts}</body></html>`;
+<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>${scripts}</body></html>`;
 const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
 const srcList = s => `<ul class="sources">${s.map(u => `<li><a href="${esc(u)}" rel="noopener nofollow" target="_blank">${esc(host(u))}</a> <span class="muted small">${esc(u.length > 70 ? u.slice(0, 70) + '…' : u)}</span></li>`).join('')}</ul>`;
 
@@ -164,7 +164,7 @@ fs.writeFileSync(path.join(out, 'about.html'), head({ title: 'About CabCount & s
 <section class="card"><h2>Other metrics</h2><ul><li>Cumulative unsupervised miles: ${esc(seed.other_metrics.unsupervised_miles_cumulative.value)} (as of ${fmtDate(seed.other_metrics.unsupervised_miles_cumulative.date)})</li><li>NHTSA Cybercab review: ${esc(seed.other_metrics.nhtsa_cybercab_review.status)}</li></ul></section>
 <section class="card"><h2>Sources</h2><h3>Fleet</h3>${srcList(seed.fleet_sources)}<h3>Cities</h3>${srcList([...new Set(seed.cities.flatMap(c => c.sources))])}<h3>Other trackers worth reading</h3>${srcList(seed.existing_trackers_competitors)}</section>
 <section class="card" id="sponsor"><h2>Sponsor CabCount</h2><p>Sponsorship slots on the homepage, city pages and weekly email. <!-- SPONSOR CONTACT PLACEHOLDER: add contact email/form before launch --> Contact details coming soon.</p></section>
-<p><a href="https://beam42.space">beam42.space</a> · <a href="https://www.youtube.com/@Beam42">Beam42 on YouTube</a></p></main>` + foot());
+<p><a href="https://beam42.space">beam42.space</a> · <a href="https://www.youtube.com/@beam42space">Beam42 on YouTube</a></p></main>` + foot());
 
 // ---------- sitemap / robots ----------
 fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p => `  <url><loc>${SITE}${p}</loc><lastmod>${seed.meta.compiled}</lastmod></url>`).join('\n')}\n</urlset>\n`);

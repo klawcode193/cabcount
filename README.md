@@ -23,7 +23,7 @@ Static Tesla Robotaxi / Cybercab rollout tracker. Plain HTML/CSS/JS, Leaflet + O
 - **Kit (ConvertKit)**: in `newsletter()` in `scripts/build.mjs`, set the form action to `https://app.kit.com/forms/<FORM_ID>/subscriptions` (fields `email_address`, `fields[city]`; create a `city` custom field in Kit), or paste Kit's embed in its place.
 - **Tally**: in the sightings section of `build.mjs`, replace `#tally-embed` with the Tally iframe (see the HTML comment).
 - **Sponsor**: the `sponsor` block, plus the contact line on the About page.
-- Check the YouTube URL (`https://www.youtube.com/@Beam42`) in `foot()`.
+- Check the YouTube URL (`https://www.youtube.com/@beam42space`) in `foot()`.
 
 ## Cloudflare Pages
 Connect the GitHub repo in Cloudflare Pages:
