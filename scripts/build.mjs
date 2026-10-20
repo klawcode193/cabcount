@@ -5,6 +5,8 @@ const out = path.join(root, 'public');
 const SITE = 'https://cabcount.app';
 const seed = JSON.parse(fs.readFileSync(path.join(root, 'data/seed-data.json'), 'utf8'));
 const warnings = [];
+const BUILT = new Date();
+const checkedPT = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true }).format(BUILT).replace(' at ', ', ') + ' PT';
 
 const STATUS = {
   live_unsupervised: { label: 'Live – no monitor', color: '#22c55e' },
@@ -56,8 +58,8 @@ const summary = {
   fleet_total: [...fleet].reverse().find(f => f.total != null)?.total,
   other_metrics: seed.other_metrics,
 };
-fs.writeFileSync(path.join(out, 'data/cities.json'), JSON.stringify({ updated: seed.meta.compiled, statuses: STATUS, summary, cities }, null, 2));
-fs.writeFileSync(path.join(out, 'data/fleet.json'), JSON.stringify({ updated: seed.meta.compiled, basis: 'Texas DMV registrations (not confirmed active vehicles)', sources: seed.fleet_sources, series: fleet }, null, 2));
+fs.writeFileSync(path.join(out, 'data/cities.json'), JSON.stringify({ updated: seed.meta.compiled, last_checked: BUILT.toISOString(), last_checked_pt: checkedPT, numbers_last_changed: seed.meta.compiled, statuses: STATUS, summary, cities }, null, 2));
+fs.writeFileSync(path.join(out, 'data/fleet.json'), JSON.stringify({ updated: seed.meta.compiled, last_checked: BUILT.toISOString(), last_checked_pt: checkedPT, numbers_last_changed: seed.meta.compiled, basis: 'Texas DMV registrations (not confirmed active vehicles)', sources: seed.fleet_sources, series: fleet }, null, 2));
 
 // ---------- templates ----------
 const fmtDate = d => { if (!d) return '—'; const [y, m, dd] = d.split('-'); const M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m - 1]; return dd ? `${M} ${+dd}, ${y}` : `${M} ${y}`; };
@@ -80,6 +82,7 @@ const newsletter = (city = '') => `<section class="card newsletter" id="newslett
 const sponsor = `<aside class="card sponsor"><span class="small muted">SPONSOR</span><h3>Sponsor CabCount</h3><p>Reach Robotaxi-curious readers every week. <a href="/about.html#sponsor">Learn more</a></p><!-- SPONSOR SLOT PLACEHOLDER --></aside>`;
 const foot = (scripts = '') => `<footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
 <p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>${scripts}</body></html>`;
+const freshness = () => `<div class="freshness"><p class="checked">Last checked: <time datetime="${BUILT.toISOString()}">${checkedPT}</time></p><p class="small muted">Numbers last changed: <time datetime="${seed.meta.compiled}">${fmtDate(seed.meta.compiled)}</time></p></div>`;
 const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
 const srcList = s => `<ul class="sources">${s.map(u => `<li><a href="${esc(u)}" rel="noopener nofollow" target="_blank">${esc(host(u))}</a> <span class="muted small">${esc(u.length > 70 ? u.slice(0, 70) + '…' : u)}</span></li>`).join('')}</ul>`;
 
@@ -88,7 +91,7 @@ fs.writeFileSync(path.join(out, 'index.html'), head({ title: 'CabCount — Is Te
 <main>
 <section class="hero"><h1>Is Robotaxi coming to <span class="accent">your city?</span></h1>
 <p class="lede">Every Tesla Robotaxi city, geofence and Cybercab — tracked, sourced, and mapped.</p>
-<p class="small muted">Last updated <time datetime="${summary.updated}">${fmtDate(summary.updated)}</time></p></section>
+${freshness()}</section>
 <section class="scoreboard">
 <div class="stat"><b id="s-live">${summary.cities_live}</b><span>cities live</span></div>
 <div class="stat"><b id="s-area">${summary.service_sq_mi.toLocaleString()}</b><span>sq mi of service*</span></div>
@@ -119,7 +122,7 @@ for (const c of cities.filter(c => c.has_page)) {
   const html = head({ title: `Tesla Robotaxi in ${place} — status & timeline | CabCount`, desc, url: `/city/${c.slug}.html` }) + `
 <main><p class="small"><a href="/">← All cities</a></p>
 <section class="hero left"><span class="pill" style="--c:${st.color}">${st.label}</span><h1>Tesla Robotaxi in ${esc(place)}</h1>
-<p class="lede">${esc(c.notes || '')}</p></section>
+<p class="lede">${esc(c.notes || '')}</p>${freshness()}</section>
 <section class="scoreboard">
 <div class="stat"><b>${c.launched ? fmtDate(c.launched) : '—'}</b><span>launched</span></div>
 <div class="stat"><b>${c.service_area_sq_mi ? '~' + c.service_area_sq_mi : '—'}</b><span>sq mi (est.)${c.service_area_as_of ? ', ' + fmtDate(c.service_area_as_of) : ''}</span></div>

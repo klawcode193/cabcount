@@ -37,3 +37,4 @@ input{background:#0b0f17;border:1px solid #334155;color:var(--txt);border-radius
 .foot{border-top:1px solid var(--line);padding:24px 16px;text-align:center;color:var(--mut);font-size:.85rem}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#121826;color:var(--txt)}.leaflet-popup-content a{color:#7dd3fc}
 .leaflet-container{font:inherit}
+.freshness{margin:10px 0 0}.freshness p{margin:2px 0}.freshness .checked{font-weight:700;font-size:1.05rem;color:var(--txt)}.freshness .checked:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--acc2);margin-right:8px;vertical-align:middle}
