@@ -51,10 +51,17 @@
     },
     {
       "date": "2026-10-16",
+      "total": 769,
+      "model_y": 420,
+      "cybercab": 349,
+      "note": "Texas DMV registration trackers (re-dated 2026-10-19)"
+    },
+    {
+      "date": "2026-10-17",
       "total": 803,
       "model_y": 454,
       "cybercab": 349,
-      "note": "X news summary of state records"
+      "note": "Texas DMV registration trackers"
     }
   ]
 }
