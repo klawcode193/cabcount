@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-19",
-  "last_checked": "2026-10-21T14:07:14.093Z",
-  "last_checked_pt": "Oct 21, 2026, 7:07 AM PT",
-  "numbers_last_changed": "2026-10-19",
+  "updated": "2026-10-22",
+  "last_checked": "2026-10-22T14:09:03.519Z",
+  "last_checked_pt": "Oct 22, 2026, 7:09 AM PT",
+  "numbers_last_changed": "2026-10-22",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,20 +26,21 @@
     }
   },
   "summary": {
-    "updated": "2026-10-19",
+    "updated": "2026-10-22",
     "cities_live": 7,
     "service_sq_mi": 1547,
-    "cybercabs_registered": 349,
-    "cybercabs_as_of": "2026-10-17",
-    "fleet_total": 803,
+    "cybercabs_registered": 351,
+    "cybercabs_as_of": "2026-10-21",
+    "fleet_total": 858,
     "other_metrics": {
       "unsupervised_miles_cumulative": {
-        "value": "1,000,000+",
-        "date": "2026-09-03",
-        "source": "https://www.thechargeport.com/robotaxi-tracker"
+        "value": "nearly 2,000,000",
+        "date": "2026-09-30",
+        "note": "Tesla Q3 2026 update: nearly two million cumulative unsupervised Robotaxi miles at quarter end (up eightfold QoQ)",
+        "source": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm"
       },
       "nhtsa_cybercab_review": {
-        "status": "Audit Query AQ26002 (2026-09-03) escalated to Special Order (2026-09-10); sworn answers due 2026-09-30; no outcome announced as of 2026-10-04",
+        "status": "Audit Query AQ26002 (2026-09-03) escalated to Special Order (2026-09-10); sworn answers now due 2026-10-30 after a 30-day extension; no outcome announced as of 2026-10-20",
         "source": "https://www.thechargeport.com/robotaxi-tracker"
       }
     }
@@ -92,7 +93,7 @@
           "note": "Teslarati measured ~288"
         }
       ],
-      "hours": "6am-midnight (reported 2026-10-17)",
+      "hours": "6am-midnight (Tesla Q3 2026 update, 2026-10-21)",
       "permit_date": null,
       "permitted_vehicles": null,
       "notes": null,
@@ -102,7 +103,8 @@
         "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin",
         "https://www.teslarati.com/tesla-expands-driverless-robotaxi-geofence-austin/",
         "https://www.thechargeport.com/robotaxi-tracker",
-        "https://x.com/i/trending/2111316973141315726"
+        "https://x.com/i/trending/2111316973141315726",
+        "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm"
       ],
       "has_page": true
     },
@@ -157,7 +159,7 @@
       ],
       "cybercab": false,
       "cybercab_public_since": null,
-      "cybercab_note": "Empty Cybercabs spotted driving in Dallas 2026-10-03; Tesla AI chief said 'Dallas soon' (Oct 2026). Not confirmed public.",
+      "cybercab_note": "Tesla said on its Q3 2026 earnings call (2026-10-21) that Cybercab will launch in Dallas next month (November 2026). Empty Cybercabs were spotted driving in Dallas 2026-10-03. Not public yet.",
       "service_area_sq_mi": 81,
       "service_area_as_of": "2026-08",
       "service_area_history": [
@@ -179,7 +181,9 @@
         "https://dallascityhall.com/government/citymanager/Documents/FY25-26%20Memos/Launch%20of%20Tesla%20Robotaxi%20Services.pdf",
         "https://electrek.co/2026/04/18/tesla-robotaxi-launches-dallas-houston-small-geofences/",
         "https://x.com/i/trending/2106631460086304926",
-        "https://x.com/i/trending/2108917366755344510"
+        "https://x.com/i/trending/2108917366755344510",
+        "https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript/",
+        "https://evwire.com/p/tesla-tsla-q3-2026-earnings-call-full-transcript"
       ],
       "has_page": true
     },
