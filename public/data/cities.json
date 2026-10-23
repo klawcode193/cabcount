@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-22",
-  "last_checked": "2026-10-22T14:09:03.519Z",
-  "last_checked_pt": "Oct 22, 2026, 7:09 AM PT",
-  "numbers_last_changed": "2026-10-22",
+  "updated": "2026-10-23",
+  "last_checked": "2026-10-23T14:12:19.433Z",
+  "last_checked_pt": "Oct 23, 2026, 7:12 AM PT",
+  "numbers_last_changed": "2026-10-23",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,7 +26,7 @@
     }
   },
   "summary": {
-    "updated": "2026-10-22",
+    "updated": "2026-10-23",
     "cities_live": 7,
     "service_sq_mi": 1547,
     "cybercabs_registered": 351,
@@ -93,10 +93,10 @@
           "note": "Teslarati measured ~288"
         }
       ],
-      "hours": "6am-midnight (Tesla Q3 2026 update, 2026-10-21)",
+      "hours": "6am to 1am last call, nearby drop-offs only after midnight (Robotaxi app screenshot shared on X 2026-10-22, per TeslaNorth)",
       "permit_date": null,
       "permitted_vehicles": null,
-      "notes": null,
+      "notes": "Oct 22, 2026: service area now reaches Circuit of the Americas, and last call moved to 1am.",
       "sources": [
         "https://www.tesla.com/robotaxi",
         "https://robotracker.app/updates?city_id=1&operator_id=1",
@@ -104,7 +104,8 @@
         "https://www.teslarati.com/tesla-expands-driverless-robotaxi-geofence-austin/",
         "https://www.thechargeport.com/robotaxi-tracker",
         "https://x.com/i/trending/2111316973141315726",
-        "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm"
+        "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm",
+        "https://teslanorth.com/2026/10/23/tesla-robotaxi-austin-1am-cota/"
       ],
       "has_page": true
     },
@@ -352,9 +353,11 @@
       "hours": null,
       "permit_date": null,
       "permitted_vehicles": null,
-      "notes": "Tesla Q2 2026 deck: 'Preparations Underway', no date. First Responder Interaction Plan filed; ~60 robotaxi-spec Model Ys reported staged.",
+      "notes": "Tesla Q2 2026 deck: 'Preparations Underway', no date. First Responder Interaction Plan filed; ~60 robotaxi-spec Model Ys reported staged. Listed as \"coming soon\" on Tesla's Robotaxi Safety Report page (2026-10-21), no date.",
       "sources": [
-        "https://www.thechargeport.com/robotaxi-tracker"
+        "https://www.thechargeport.com/robotaxi-tracker",
+        "https://www.notateslaapp.com/news/4860/tesla-names-next-robotaxi-cities-shares-miles-driven-safety-data",
+        "https://www.teslaoracle.com/2026/10/23/tesla-announces-robotaxi-launch-in-four-more-cities-releases-safety-data-via-new-website-no-kittens-were-hurt/"
       ],
       "has_page": true
     },
@@ -379,9 +382,11 @@
       "hours": null,
       "permit_date": "2026-08-20",
       "permitted_vehicles": 5000,
-      "notes": "Nevada Transportation Authority approved up to 5,000 vehicles across Clark County on 2026-08-20; service must start within 120 days of permit issuance (i.e. by roughly mid-Dec 2026). No riders yet as of late Sept 2026.",
+      "notes": "Nevada Transportation Authority approved up to 5,000 vehicles across Clark County on 2026-08-20; service must start within 120 days of permit issuance (i.e. by roughly mid-Dec 2026). No riders yet as of late Sept 2026. Listed as \"coming soon\" on Tesla's Robotaxi Safety Report page (2026-10-21), no date.",
       "sources": [
-        "https://www.thechargeport.com/robotaxi-tracker"
+        "https://www.thechargeport.com/robotaxi-tracker",
+        "https://www.notateslaapp.com/news/4860/tesla-names-next-robotaxi-cities-shares-miles-driven-safety-data",
+        "https://www.teslaoracle.com/2026/10/23/tesla-announces-robotaxi-launch-in-four-more-cities-releases-safety-data-via-new-website-no-kittens-were-hurt/"
       ],
       "has_page": true
     },
@@ -413,18 +418,60 @@
       "has_page": true
     },
     {
-      "slug": "requested-san-antonio-tx",
-      "name": "San Antonio, TX",
-      "status": "requested",
-      "status_label": "Requested",
+      "slug": "jacksonville-fl",
+      "name": "Jacksonville",
+      "region": "FL",
+      "country": "US",
+      "lat": 30.3322,
+      "lng": -81.6557,
+      "status": "preparing",
+      "status_label": "Preparing / Permitted",
+      "launched": null,
+      "unsupervised_since": null,
+      "vehicles": [],
+      "cybercab": false,
+      "cybercab_public_since": null,
+      "cybercab_note": null,
+      "service_area_sq_mi": null,
+      "service_area_as_of": null,
+      "service_area_history": [],
+      "hours": null,
+      "permit_date": null,
+      "permitted_vehicles": null,
+      "notes": "Listed as \"coming soon\" on Tesla's new Robotaxi Safety Report page (first reported 2026-10-21); no launch date given.",
+      "sources": [
+        "https://www.notateslaapp.com/news/4860/tesla-names-next-robotaxi-cities-shares-miles-driven-safety-data",
+        "https://www.teslaoracle.com/2026/10/23/tesla-announces-robotaxi-launch-in-four-more-cities-releases-safety-data-via-new-website-no-kittens-were-hurt/"
+      ],
+      "has_page": true
+    },
+    {
+      "slug": "san-antonio-tx",
+      "name": "San Antonio",
+      "region": "TX",
+      "country": "US",
       "lat": 29.4241,
       "lng": -98.4936,
-      "requested_on": "2026-10-18",
+      "status": "preparing",
+      "status_label": "Preparing / Permitted",
+      "launched": null,
+      "unsupervised_since": null,
+      "vehicles": [],
+      "cybercab": false,
+      "cybercab_public_since": null,
+      "cybercab_note": null,
+      "service_area_sq_mi": null,
+      "service_area_as_of": null,
+      "service_area_history": [],
+      "hours": null,
+      "permit_date": null,
+      "permitted_vehicles": null,
+      "notes": "Listed as \"coming soon\" on Tesla's new Robotaxi Safety Report page (first reported 2026-10-21); no launch date given.",
       "sources": [
-        "https://x.com/TexasroseGirl/status/2111795146408825089"
+        "https://www.notateslaapp.com/news/4860/tesla-names-next-robotaxi-cities-shares-miles-driven-safety-data",
+        "https://www.teslaoracle.com/2026/10/23/tesla-announces-robotaxi-launch-in-four-more-cities-releases-safety-data-via-new-website-no-kittens-were-hurt/"
       ],
-      "approx_coords": true,
-      "has_page": false
+      "has_page": true
     },
     {
       "slug": "requested-sydney-au",
@@ -464,20 +511,6 @@
       "requested_on": "2026-10-11",
       "sources": [
         "https://x.com/Substrate_Zer0/status/2109423851553898984"
-      ],
-      "approx_coords": true,
-      "has_page": false
-    },
-    {
-      "slug": "requested-jacksonville-fl",
-      "name": "Jacksonville, FL",
-      "status": "requested",
-      "status_label": "Requested",
-      "lat": 30.3322,
-      "lng": -81.6557,
-      "requested_on": "2026-10-18",
-      "sources": [
-        "https://x.com/EwingDawson/status/2111703303738601917"
       ],
       "approx_coords": true,
       "has_page": false
