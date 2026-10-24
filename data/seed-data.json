@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "CabCount seed data",
-    "compiled": "2026-10-23",
+    "compiled": "2026-10-24",
     "compiled_tz": "America/Los_Angeles",
     "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
     "status_values": {
@@ -291,10 +291,11 @@
       "lng": -98.4936,
       "status": "preparing",
       "launched": null,
-      "notes": "Listed as \"coming soon\" on Tesla's new Robotaxi Safety Report page (first reported 2026-10-21); no launch date given.",
+      "notes": "Listed as \"coming soon\" on Tesla's new Robotaxi Safety Report page (first reported 2026-10-21); no launch date given. As of 2026-10-24, Tesla's first-responder vehicle lookup assigns 19 Model Y robotaxis to San Antonio (per robotaxitracker.com); no public rides yet.",
       "sources": [
         "https://www.notateslaapp.com/news/4860/tesla-names-next-robotaxi-cities-shares-miles-driven-safety-data",
-        "https://www.teslaoracle.com/2026/10/23/tesla-announces-robotaxi-launch-in-four-more-cities-releases-safety-data-via-new-website-no-kittens-were-hurt/"
+        "https://www.teslaoracle.com/2026/10/23/tesla-announces-robotaxi-launch-in-four-more-cities-releases-safety-data-via-new-website-no-kittens-were-hurt/",
+        "https://robotaxitracker.com/cybercab"
       ]
     }
   ],
@@ -384,6 +385,13 @@
       "model_y": 507,
       "cybercab": 351,
       "note": "Texas DMV registry via fsddb.com and robotaxitracker.com (both show 858 = 507 Model Y + 351 Cybercab). CNBC on 2026-10-21 cited a different DMV figure (362 Model Y, 449 Cybercab) that does not match the registry trackers; not used."
+    },
+    {
+      "date": "2026-10-23",
+      "total": 927,
+      "model_y": 507,
+      "cybercab": 420,
+      "note": "Texas DMV registry via fsddb.com and robotaxitracker.com (both show 927 = 507 Model Y + 420 Cybercab; +69 Cybercabs listed on 2026-10-23, Model Y unchanged)."
     }
   ],
   "fleet_sources": [

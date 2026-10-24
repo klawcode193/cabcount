@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-23",
-  "last_checked": "2026-10-23T14:12:19.433Z",
-  "last_checked_pt": "Oct 23, 2026, 7:12 AM PT",
-  "numbers_last_changed": "2026-10-23",
+  "updated": "2026-10-24",
+  "last_checked": "2026-10-24T14:01:57.627Z",
+  "last_checked_pt": "Oct 24, 2026, 7:01 AM PT",
+  "numbers_last_changed": "2026-10-24",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,12 +26,12 @@
     }
   },
   "summary": {
-    "updated": "2026-10-23",
+    "updated": "2026-10-24",
     "cities_live": 7,
     "service_sq_mi": 1547,
-    "cybercabs_registered": 351,
-    "cybercabs_as_of": "2026-10-21",
-    "fleet_total": 858,
+    "cybercabs_registered": 420,
+    "cybercabs_as_of": "2026-10-23",
+    "fleet_total": 927,
     "other_metrics": {
       "unsupervised_miles_cumulative": {
         "value": "nearly 2,000,000",
@@ -466,10 +466,11 @@
       "hours": null,
       "permit_date": null,
       "permitted_vehicles": null,
-      "notes": "Listed as \"coming soon\" on Tesla's new Robotaxi Safety Report page (first reported 2026-10-21); no launch date given.",
+      "notes": "Listed as \"coming soon\" on Tesla's new Robotaxi Safety Report page (first reported 2026-10-21); no launch date given. As of 2026-10-24, Tesla's first-responder vehicle lookup assigns 19 Model Y robotaxis to San Antonio (per robotaxitracker.com); no public rides yet.",
       "sources": [
         "https://www.notateslaapp.com/news/4860/tesla-names-next-robotaxi-cities-shares-miles-driven-safety-data",
-        "https://www.teslaoracle.com/2026/10/23/tesla-announces-robotaxi-launch-in-four-more-cities-releases-safety-data-via-new-website-no-kittens-were-hurt/"
+        "https://www.teslaoracle.com/2026/10/23/tesla-announces-robotaxi-launch-in-four-more-cities-releases-safety-data-via-new-website-no-kittens-were-hurt/",
+        "https://robotaxitracker.com/cybercab"
       ],
       "has_page": true
     },
