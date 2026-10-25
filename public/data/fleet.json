@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-24",
-  "last_checked": "2026-10-24T14:01:57.627Z",
-  "last_checked_pt": "Oct 24, 2026, 7:01 AM PT",
-  "numbers_last_changed": "2026-10-24",
+  "updated": "2026-10-25",
+  "last_checked": "2026-10-25T14:10:59.355Z",
+  "last_checked_pt": "Oct 25, 2026, 7:10 AM PT",
+  "numbers_last_changed": "2026-10-25",
   "basis": "Texas DMV registrations (not confirmed active vehicles)",
   "sources": [
     "https://www.thechargeport.com/robotaxi-tracker",
@@ -81,6 +81,13 @@
       "model_y": 507,
       "cybercab": 420,
       "note": "Texas DMV registry via fsddb.com and robotaxitracker.com (both show 927 = 507 Model Y + 420 Cybercab; +69 Cybercabs listed on 2026-10-23, Model Y unchanged)."
+    },
+    {
+      "date": "2026-10-24",
+      "total": 970,
+      "model_y": 507,
+      "cybercab": 463,
+      "note": "Texas DMV registry via fsddb.com (970 registered VINs = 507 Model Y + 463 Cybercab; daily series shows 927 on 2026-10-23, 970 on 2026-10-24 and 2026-10-25; +43 Cybercabs, Model Y unchanged)."
     }
   ]
 }
