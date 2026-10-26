@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-25",
-  "last_checked": "2026-10-26T14:13:32.899Z",
-  "last_checked_pt": "Oct 26, 2026, 7:13 AM PT",
-  "numbers_last_changed": "2026-10-25",
+  "updated": "2026-10-26",
+  "last_checked": "2026-10-26T16:10:23.641Z",
+  "last_checked_pt": "Oct 26, 2026, 9:10 AM PT",
+  "numbers_last_changed": "2026-10-26",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,7 +26,7 @@
     }
   },
   "summary": {
-    "updated": "2026-10-25",
+    "updated": "2026-10-26",
     "cities_live": 7,
     "service_sq_mi": 1547,
     "cybercabs_registered": 463,
@@ -216,11 +216,14 @@
       "hours": null,
       "permit_date": null,
       "permitted_vehicles": null,
-      "notes": "Zone is NW Harris County (Jersey Village, Willowbrook, FM 1960), ~14 mi NW of downtown.",
+      "notes": "Oct 26, 2026: service area expanded from NW Harris County (Jersey Village, Willowbrook, FM 1960) southeast through downtown toward Bellaire.",
       "sources": [
         "https://www.axios.com/local/houston/2026/04/21/houston-tesla-robotaxi-service-launch",
         "https://electrek.co/2026/04/18/tesla-robotaxi-launches-dallas-houston-small-geofences/",
-        "https://x.com/i/trending/2107508327798255762"
+        "https://x.com/i/trending/2107508327798255762",
+        "https://teslanorth.com/2026/10/26/tesla-robotaxi-houston-starship-map/",
+        "https://driveteslacanada.ca/news/tesla-houston-robotaxi-service-area-expansion/",
+        "https://www.teslarati.com/tesla-expands-robotaxi-geofence-houston-spacex/"
       ],
       "has_page": true
     },
