@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-26",
-  "last_checked": "2026-10-26T16:10:23.641Z",
-  "last_checked_pt": "Oct 26, 2026, 9:10 AM PT",
-  "numbers_last_changed": "2026-10-26",
+  "updated": "2026-10-27",
+  "last_checked": "2026-10-27T14:04:43.293Z",
+  "last_checked_pt": "Oct 27, 2026, 7:04 AM PT",
+  "numbers_last_changed": "2026-10-27",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,9 +26,9 @@
     }
   },
   "summary": {
-    "updated": "2026-10-26",
+    "updated": "2026-10-27",
     "cities_live": 7,
-    "service_sq_mi": 1547,
+    "service_sq_mi": 1776,
     "cybercabs_registered": 463,
     "cybercabs_as_of": "2026-10-24",
     "fleet_total": 970,
@@ -205,12 +205,12 @@
       "cybercab": false,
       "cybercab_public_since": null,
       "cybercab_note": "Drone video 2026-10-06 showed ~190-200 Cybercabs staged at a Houston fleet lot (Hempstead). Not in public service.",
-      "service_area_sq_mi": 25,
-      "service_area_as_of": "2026-08",
+      "service_area_sq_mi": 254,
+      "service_area_as_of": "2026-10-26",
       "service_area_history": [
         {
-          "date": "2026-08",
-          "sq_mi": 25
+          "date": "2026-10-26",
+          "sq_mi": 254
         }
       ],
       "hours": null,
@@ -223,7 +223,8 @@
         "https://x.com/i/trending/2107508327798255762",
         "https://teslanorth.com/2026/10/26/tesla-robotaxi-houston-starship-map/",
         "https://driveteslacanada.ca/news/tesla-houston-robotaxi-service-area-expansion/",
-        "https://www.teslarati.com/tesla-expands-robotaxi-geofence-houston-spacex/"
+        "https://www.teslarati.com/tesla-expands-robotaxi-geofence-houston-spacex/",
+        "https://electrek.co/2026/10/26/tesla-robotaxi-houston-geofence-expansion-shape/"
       ],
       "has_page": true
     },

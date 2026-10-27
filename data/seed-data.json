@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "CabCount seed data",
-    "compiled": "2026-10-26",
+    "compiled": "2026-10-27",
     "compiled_tz": "America/Los_Angeles",
     "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
     "status_values": {
@@ -144,8 +144,8 @@
       ],
       "cybercab": false,
       "cybercab_note": "Drone video 2026-10-06 showed ~190-200 Cybercabs staged at a Houston fleet lot (Hempstead). Not in public service.",
-      "service_area_sq_mi": 25,
-      "service_area_as_of": "2026-08",
+      "service_area_sq_mi": 254,
+      "service_area_as_of": "2026-10-26",
       "notes": "Oct 26, 2026: service area expanded from NW Harris County (Jersey Village, Willowbrook, FM 1960) southeast through downtown toward Bellaire.",
       "sources": [
         "https://www.axios.com/local/houston/2026/04/21/houston-tesla-robotaxi-service-launch",
@@ -153,9 +153,10 @@
         "https://x.com/i/trending/2107508327798255762",
         "https://teslanorth.com/2026/10/26/tesla-robotaxi-houston-starship-map/",
         "https://driveteslacanada.ca/news/tesla-houston-robotaxi-service-area-expansion/",
-        "https://www.teslarati.com/tesla-expands-robotaxi-geofence-houston-spacex/"
+        "https://www.teslarati.com/tesla-expands-robotaxi-geofence-houston-spacex/",
+        "https://electrek.co/2026/10/26/tesla-robotaxi-houston-geofence-expansion-shape/"
       ],
-      "service_area_note": "2026-10-26: Tesla announced a bigger Houston service area (\"Houston, we have liftoff\", @robotaxi on X). The new zone keeps the NW Houston area and stretches southeast through central Houston and downtown toward Bellaire. Tesla gave no square-mile figure; new size not yet measured."
+      "service_area_note": "2026-10-26: Tesla announced a bigger Houston service area (\"Houston, we have liftoff\", @robotaxi on X). The new zone keeps the NW Houston area and stretches southeast through central Houston and downtown toward Bellaire. Robotaxi Tracker measures it at about 254 sq mi, roughly 10x the ~25 sq mi launch zone (per Electrek, Oct 26)."
     },
     {
       "id": "miami-fl",
