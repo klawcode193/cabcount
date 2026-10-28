@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-27",
-  "last_checked": "2026-10-27T14:04:43.293Z",
-  "last_checked_pt": "Oct 27, 2026, 7:04 AM PT",
-  "numbers_last_changed": "2026-10-27",
+  "updated": "2026-10-28",
+  "last_checked": "2026-10-28T14:02:50.816Z",
+  "last_checked_pt": "Oct 28, 2026, 7:02 AM PT",
+  "numbers_last_changed": "2026-10-28",
   "basis": "Texas DMV registrations (not confirmed active vehicles)",
   "sources": [
     "https://www.thechargeport.com/robotaxi-tracker",
@@ -88,6 +88,13 @@
       "model_y": 507,
       "cybercab": 463,
       "note": "Texas DMV registry via fsddb.com (970 registered VINs = 507 Model Y + 463 Cybercab; daily series shows 927 on 2026-10-23, 970 on 2026-10-24 and 2026-10-25; +43 Cybercabs, Model Y unchanged)."
+    },
+    {
+      "date": "2026-10-27",
+      "total": 1080,
+      "model_y": 507,
+      "cybercab": 573,
+      "note": "Texas DMV registry via fsddb.com (https://fsddb.com/robotaxi?operator=tesla-robotaxi-llc&service=all: 1,080 registered VINs = 507 Model Y + 573 Cybercab; daily series shows 970 on 2026-10-26, 1,080 on 2026-10-27 and 2026-10-28; +110 Cybercabs, Model Y unchanged). First time over 1,000."
     }
   ]
 }

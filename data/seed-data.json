@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "CabCount seed data",
-    "compiled": "2026-10-27",
+    "compiled": "2026-10-28",
     "compiled_tz": "America/Los_Angeles",
     "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
     "status_values": {
@@ -404,6 +404,13 @@
       "model_y": 507,
       "cybercab": 463,
       "note": "Texas DMV registry via fsddb.com (970 registered VINs = 507 Model Y + 463 Cybercab; daily series shows 927 on 2026-10-23, 970 on 2026-10-24 and 2026-10-25; +43 Cybercabs, Model Y unchanged)."
+    },
+    {
+      "date": "2026-10-27",
+      "total": 1080,
+      "model_y": 507,
+      "cybercab": 573,
+      "note": "Texas DMV registry via fsddb.com (https://fsddb.com/robotaxi?operator=tesla-robotaxi-llc&service=all: 1,080 registered VINs = 507 Model Y + 573 Cybercab; daily series shows 970 on 2026-10-26, 1,080 on 2026-10-27 and 2026-10-28; +110 Cybercabs, Model Y unchanged). First time over 1,000."
     }
   ],
   "fleet_sources": [
