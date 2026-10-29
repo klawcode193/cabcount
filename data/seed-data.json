@@ -154,9 +154,10 @@
         "https://teslanorth.com/2026/10/26/tesla-robotaxi-houston-starship-map/",
         "https://driveteslacanada.ca/news/tesla-houston-robotaxi-service-area-expansion/",
         "https://www.teslarati.com/tesla-expands-robotaxi-geofence-houston-spacex/",
-        "https://electrek.co/2026/10/26/tesla-robotaxi-houston-geofence-expansion-shape/"
+        "https://electrek.co/2026/10/26/tesla-robotaxi-houston-geofence-expansion-shape/",
+        "https://electrek.co/2026/10/28/tesla-robotaxi-houston-rocket-service-area-fake/"
       ],
-      "service_area_note": "2026-10-26: Tesla announced a bigger Houston service area (\"Houston, we have liftoff\", @robotaxi on X). The new zone keeps the NW Houston area and stretches southeast through central Houston and downtown toward Bellaire. Robotaxi Tracker measures it at about 254 sq mi, roughly 10x the ~25 sq mi launch zone (per Electrek, Oct 26)."
+      "service_area_note": "2026-10-26: Tesla announced a bigger Houston service area (\"Houston, we have liftoff\", @robotaxi on X). The new zone keeps the NW Houston area and stretches southeast through central Houston and downtown toward Bellaire. Robotaxi Tracker measures it at about 254 sq mi, roughly 10x the ~25 sq mi launch zone (per Electrek, Oct 26). Caveat (Electrek, Oct 28): Robotaxi Tracker's creator found the app won't pick up in parts of downtown inside the new map, so the usable area is smaller than the drawn zone."
     },
     {
       "id": "miami-fl",
