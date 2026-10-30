@@ -1,7 +1,7 @@
 {
   "updated": "2026-10-28",
-  "last_checked": "2026-10-30T14:03:55.400Z",
-  "last_checked_pt": "Oct 30, 2026, 7:03 AM PT",
+  "last_checked": "2026-10-30T14:04:19.145Z",
+  "last_checked_pt": "Oct 30, 2026, 7:04 AM PT",
   "numbers_last_changed": "2026-10-28",
   "statuses": {
     "live_unsupervised": {
@@ -176,7 +176,7 @@
       "hours": null,
       "permit_date": null,
       "permitted_vehicles": null,
-      "notes": "City of Dallas memo dates launch April 19, 2026; Tesla says it intends to cover all of Dallas. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per Robotaxi Tracker's creator via TeslaNorth. Tesla hasn't announced it officially.",
+      "notes": "City of Dallas memo dates launch April 19, 2026; Tesla says it intends to cover all of Dallas. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially.",
       "sources": [
         "https://www.reuters.com/business/autos-transportation/tesla-rolls-out-robotaxis-dallas-houston-2026-04-18/",
         "https://dallascityhall.com/government/citymanager/Documents/FY25-26%20Memos/Launch%20of%20Tesla%20Robotaxi%20Services.pdf",
@@ -217,7 +217,7 @@
       "hours": null,
       "permit_date": null,
       "permitted_vehicles": null,
-      "notes": "Oct 26, 2026: service area expanded from NW Harris County (Jersey Village, Willowbrook, FM 1960) southeast through downtown toward Bellaire. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per Robotaxi Tracker's creator via TeslaNorth. Tesla hasn't announced it officially.",
+      "notes": "Oct 26, 2026: service area expanded from NW Harris County (Jersey Village, Willowbrook, FM 1960) southeast through downtown toward Bellaire. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially.",
       "sources": [
         "https://www.axios.com/local/houston/2026/04/21/houston-tesla-robotaxi-service-launch",
         "https://electrek.co/2026/04/18/tesla-robotaxi-launches-dallas-houston-small-geofences/",
