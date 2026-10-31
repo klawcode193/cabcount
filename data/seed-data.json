@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "CabCount seed data",
-    "compiled": "2026-10-28",
+    "compiled": "2026-10-31",
     "compiled_tz": "America/Los_Angeles",
     "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
     "status_values": {
@@ -58,7 +58,7 @@
           "note": "Teslarati measured ~288"
         }
       ],
-      "hours": "6am to 1am last call, nearby drop-offs only after midnight (Robotaxi app screenshot shared on X 2026-10-22, per TeslaNorth)",
+      "hours": "6am to 2am (official @robotaxi post Oct 30, 2026; Tesla didn't say which cities the new hours cover, and availability can vary by area)",
       "sources": [
         "https://www.tesla.com/robotaxi",
         "https://robotracker.app/updates?city_id=1&operator_id=1",
@@ -67,7 +67,8 @@
         "https://www.thechargeport.com/robotaxi-tracker",
         "https://x.com/i/trending/2111316973141315726",
         "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm",
-        "https://teslanorth.com/2026/10/23/tesla-robotaxi-austin-1am-cota/"
+        "https://teslanorth.com/2026/10/23/tesla-robotaxi-austin-1am-cota/",
+        "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals"
       ],
       "service_area_note": "2026-10-22: geofence extended southeast to include Circuit of the Americas ahead of the US Grand Prix (app screenshot shared on X, per TeslaNorth). New square mileage not yet measured.",
       "notes": "Oct 22, 2026: service area now reaches Circuit of the Americas, and last call moved to 1am."
@@ -119,7 +120,7 @@
           "sq_mi": 81
         }
       ],
-      "notes": "City of Dallas memo dates launch April 19, 2026; Tesla says it intends to cover all of Dallas. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially.",
+      "notes": "City of Dallas memo dates launch April 19, 2026; Tesla says it intends to cover all of Dallas. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App).",
       "sources": [
         "https://www.reuters.com/business/autos-transportation/tesla-rolls-out-robotaxis-dallas-houston-2026-04-18/",
         "https://dallascityhall.com/government/citymanager/Documents/FY25-26%20Memos/Launch%20of%20Tesla%20Robotaxi%20Services.pdf",
@@ -128,7 +129,8 @@
         "https://x.com/i/trending/2108917366755344510",
         "https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript/",
         "https://evwire.com/p/tesla-tsla-q3-2026-earnings-call-full-transcript",
-        "https://teslanorth.com/2026/10/29/robotaxi-free-first-ride/"
+        "https://teslanorth.com/2026/10/29/robotaxi-free-first-ride/",
+        "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals"
       ]
     },
     {
@@ -147,7 +149,7 @@
       "cybercab_note": "Drone video 2026-10-06 showed ~190-200 Cybercabs staged at a Houston fleet lot (Hempstead). Not in public service.",
       "service_area_sq_mi": 254,
       "service_area_as_of": "2026-10-26",
-      "notes": "Oct 26, 2026: service area expanded from NW Harris County (Jersey Village, Willowbrook, FM 1960) southeast through downtown toward Bellaire. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially.",
+      "notes": "Oct 26, 2026: service area expanded from NW Harris County (Jersey Village, Willowbrook, FM 1960) southeast through downtown toward Bellaire. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App).",
       "sources": [
         "https://www.axios.com/local/houston/2026/04/21/houston-tesla-robotaxi-service-launch",
         "https://electrek.co/2026/04/18/tesla-robotaxi-launches-dallas-houston-small-geofences/",
@@ -157,7 +159,8 @@
         "https://www.teslarati.com/tesla-expands-robotaxi-geofence-houston-spacex/",
         "https://electrek.co/2026/10/26/tesla-robotaxi-houston-geofence-expansion-shape/",
         "https://electrek.co/2026/10/28/tesla-robotaxi-houston-rocket-service-area-fake/",
-        "https://teslanorth.com/2026/10/29/robotaxi-free-first-ride/"
+        "https://teslanorth.com/2026/10/29/robotaxi-free-first-ride/",
+        "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals"
       ],
       "service_area_note": "2026-10-26: Tesla announced a bigger Houston service area (\"Houston, we have liftoff\", @robotaxi on X). The new zone keeps the NW Houston area and stretches southeast through central Houston and downtown toward Bellaire. Robotaxi Tracker measures it at about 254 sq mi, roughly 10x the ~25 sq mi launch zone (per Electrek, Oct 26). Caveat (Electrek, Oct 28): Robotaxi Tracker's creator found the app won't pick up in parts of downtown inside the new map, so the usable area is smaller than the drawn zone."
     },
@@ -176,11 +179,12 @@
       "cybercab": false,
       "service_area_sq_mi": 31,
       "service_area_as_of": "2026-08",
-      "notes": "Unsupervised rides from day one.",
+      "notes": "Unsupervised rides from day one. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App).",
       "sources": [
         "https://www.tesla.com/robotaxi",
         "https://www.thechargeport.com/robotaxi-tracker",
-        "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin"
+        "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin",
+        "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals"
       ]
     },
     {
@@ -198,11 +202,12 @@
       "cybercab": false,
       "service_area_sq_mi": 26,
       "service_area_as_of": "2026-08",
-      "notes": "Zone around Semoran Blvd / Lee Vista Blvd near MCO; no airport terminal, downtown or theme-park pickups.",
+      "notes": "Zone around Semoran Blvd / Lee Vista Blvd near MCO; no airport terminal, downtown or theme-park pickups. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App).",
       "sources": [
         "https://www.tesla.com/robotaxi",
         "https://www.thechargeport.com/robotaxi-tracker",
-        "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin"
+        "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin",
+        "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals"
       ]
     },
     {
@@ -220,11 +225,12 @@
       "cybercab": false,
       "service_area_sq_mi": 24,
       "service_area_as_of": "2026-08",
-      "notes": "Covers West Tampa and Tampa Heights.",
+      "notes": "Covers West Tampa and Tampa Heights. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App).",
       "sources": [
         "https://www.tesla.com/robotaxi",
         "https://www.thechargeport.com/robotaxi-tracker",
-        "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin"
+        "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin",
+        "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals"
       ]
     },
     {
@@ -414,6 +420,13 @@
       "model_y": 507,
       "cybercab": 573,
       "note": "Texas DMV registry via fsddb.com (https://fsddb.com/robotaxi?operator=tesla-robotaxi-llc&service=all: 1,080 registered VINs = 507 Model Y + 573 Cybercab; daily series shows 970 on 2026-10-26, 1,080 on 2026-10-27 and 2026-10-28; +110 Cybercabs, Model Y unchanged). First time over 1,000."
+    },
+    {
+      "date": "2026-10-30",
+      "total": 1204,
+      "model_y": 631,
+      "cybercab": 573,
+      "note": "Texas DMV registry via fsddb.com (https://fsddb.com/robotaxi?operator=tesla-robotaxi-llc&service=all: 1,204 registered VINs = 631 Model Y + 573 Cybercab; daily series shows 1,080 on 2026-10-29, 1,204 on 2026-10-30 and 2026-10-31; +124 Model Y, Cybercab unchanged). First new Model Y registrations since mid-October."
     }
   ],
   "fleet_sources": [
