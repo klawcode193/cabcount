@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "CabCount seed data",
-    "compiled": "2026-10-31",
+    "compiled": "2026-11-02",
     "compiled_tz": "America/Los_Angeles",
     "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
     "status_values": {
@@ -163,6 +163,37 @@
         "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals"
       ],
       "service_area_note": "2026-10-26: Tesla announced a bigger Houston service area (\"Houston, we have liftoff\", @robotaxi on X). The new zone keeps the NW Houston area and stretches southeast through central Houston and downtown toward Bellaire. Robotaxi Tracker measures it at about 254 sq mi, roughly 10x the ~25 sq mi launch zone (per Electrek, Oct 26). Caveat (Electrek, Oct 28): Robotaxi Tracker's creator found the app won't pick up in parts of downtown inside the new map, so the usable area is smaller than the drawn zone."
+    },
+    {
+      "id": "fort-worth-tx",
+      "city": "Fort Worth",
+      "state": "TX",
+      "country": "US",
+      "lat": 32.7555,
+      "lng": -97.3308,
+      "status": "live_unsupervised",
+      "launched": "2026-11-02",
+      "vehicles": [
+        "Model Y"
+      ],
+      "cybercab": false,
+      "service_area_sq_mi": 143,
+      "service_area_as_of": "2026-11-02",
+      "service_area_history": [
+        {
+          "date": "2026-11-02",
+          "sq_mi": 143,
+          "note": "Launch geofence; Sawyer Merritt estimate via Not a Tesla App and EVwire (EVwire own estimate ~142; Robotaxi Log traced ~104)"
+        }
+      ],
+      "notes": "Tesla's @robotaxi account posted Nov 1, 2026: \"Robotaxi available in Fort Worth starting tomorrow, 6am,\" with a launch geofence map centered on downtown (north toward Saginaw, west past White Settlement, southwest to Benbrook, east edge near Haltom City and Forest Hill). Not a Tesla App reports rides are unsupervised with no safety monitor. Not on Tesla's Oct 21 coming-soon list. The zone is not connected to Dallas. Tesla hasn't said how many cars serve Fort Worth, pricing, or whether Cybercab runs here; vehicle type listed as Model Y until confirmed.",
+      "sources": [
+        "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
+        "https://teslanorth.com/2026/11/01/tesla-robotaxi-fort-worth-launch/",
+        "https://evwire.com/p/tesla-robotaxi-fort-worth-launch-geofence-details",
+        "https://eletric-vehicles.com/tesla/tesla-launches-robotaxi-in-fort-worth-a-city-missing-from-its-next-up-list/",
+        "https://x.com/i/trending/2117089627693842559"
+      ]
     },
     {
       "id": "miami-fl",
@@ -427,6 +458,13 @@
       "model_y": 631,
       "cybercab": 573,
       "note": "Texas DMV registry via fsddb.com (https://fsddb.com/robotaxi?operator=tesla-robotaxi-llc&service=all: 1,204 registered VINs = 631 Model Y + 573 Cybercab; daily series shows 1,080 on 2026-10-29, 1,204 on 2026-10-30 and 2026-10-31; +124 Model Y, Cybercab unchanged). First new Model Y registrations since mid-October."
+    },
+    {
+      "date": "2026-11-01",
+      "total": 1244,
+      "model_y": 671,
+      "cybercab": 573,
+      "note": "Texas DMV registry via fsddb.com (https://fsddb.com/robotaxi?operator=tesla-robotaxi-llc&service=all: 1,244 registered VINs = 631 Model Y + 573 Cybercab + 40 listed on the registry as \"2026 Tesla Modey Y\", an apparent spelling of Model Y; daily series shows 1,204 on 2026-10-31, 1,244 on 2026-11-01 and 2026-11-02; +40 Model Y, Cybercab unchanged)."
     }
   ],
   "fleet_sources": [

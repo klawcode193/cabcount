@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-31",
-  "last_checked": "2026-10-31T14:01:44.961Z",
-  "last_checked_pt": "Oct 31, 2026, 7:01 AM PT",
-  "numbers_last_changed": "2026-10-31",
+  "updated": "2026-11-02",
+  "last_checked": "2026-11-02T15:11:40.887Z",
+  "last_checked_pt": "Nov 2, 2026, 7:11 AM PT",
+  "numbers_last_changed": "2026-11-02",
   "basis": "Texas DMV registrations (not confirmed active vehicles)",
   "sources": [
     "https://www.thechargeport.com/robotaxi-tracker",
@@ -102,6 +102,13 @@
       "model_y": 631,
       "cybercab": 573,
       "note": "Texas DMV registry via fsddb.com (https://fsddb.com/robotaxi?operator=tesla-robotaxi-llc&service=all: 1,204 registered VINs = 631 Model Y + 573 Cybercab; daily series shows 1,080 on 2026-10-29, 1,204 on 2026-10-30 and 2026-10-31; +124 Model Y, Cybercab unchanged). First new Model Y registrations since mid-October."
+    },
+    {
+      "date": "2026-11-01",
+      "total": 1244,
+      "model_y": 671,
+      "cybercab": 573,
+      "note": "Texas DMV registry via fsddb.com (https://fsddb.com/robotaxi?operator=tesla-robotaxi-llc&service=all: 1,244 registered VINs = 631 Model Y + 573 Cybercab + 40 listed on the registry as \"2026 Tesla Modey Y\", an apparent spelling of Model Y; daily series shows 1,204 on 2026-10-31, 1,244 on 2026-11-01 and 2026-11-02; +40 Model Y, Cybercab unchanged)."
     }
   ]
 }

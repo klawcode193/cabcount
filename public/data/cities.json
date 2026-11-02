@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-31",
-  "last_checked": "2026-10-31T14:01:44.961Z",
-  "last_checked_pt": "Oct 31, 2026, 7:01 AM PT",
-  "numbers_last_changed": "2026-10-31",
+  "updated": "2026-11-02",
+  "last_checked": "2026-11-02T15:11:40.887Z",
+  "last_checked_pt": "Nov 2, 2026, 7:11 AM PT",
+  "numbers_last_changed": "2026-11-02",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,12 +26,12 @@
     }
   },
   "summary": {
-    "updated": "2026-10-31",
-    "cities_live": 7,
-    "service_sq_mi": 1776,
+    "updated": "2026-11-02",
+    "cities_live": 8,
+    "service_sq_mi": 1919,
     "cybercabs_registered": 573,
-    "cybercabs_as_of": "2026-10-30",
-    "fleet_total": 1204,
+    "cybercabs_as_of": "2026-11-01",
+    "fleet_total": 1244,
     "other_metrics": {
       "unsupervised_miles_cumulative": {
         "value": "nearly 2,000,000",
@@ -231,6 +231,45 @@
         "https://electrek.co/2026/10/28/tesla-robotaxi-houston-rocket-service-area-fake/",
         "https://teslanorth.com/2026/10/29/robotaxi-free-first-ride/",
         "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals"
+      ],
+      "has_page": true
+    },
+    {
+      "slug": "fort-worth-tx",
+      "name": "Fort Worth",
+      "region": "TX",
+      "country": "US",
+      "lat": 32.7555,
+      "lng": -97.3308,
+      "status": "live_unsupervised",
+      "status_label": "Live – no monitor",
+      "launched": "2026-11-02",
+      "unsupervised_since": null,
+      "vehicles": [
+        "Model Y"
+      ],
+      "cybercab": false,
+      "cybercab_public_since": null,
+      "cybercab_note": null,
+      "service_area_sq_mi": 143,
+      "service_area_as_of": "2026-11-02",
+      "service_area_history": [
+        {
+          "date": "2026-11-02",
+          "sq_mi": 143,
+          "note": "Launch geofence; Sawyer Merritt estimate via Not a Tesla App and EVwire (EVwire own estimate ~142; Robotaxi Log traced ~104)"
+        }
+      ],
+      "hours": null,
+      "permit_date": null,
+      "permitted_vehicles": null,
+      "notes": "Tesla's @robotaxi account posted Nov 1, 2026: \"Robotaxi available in Fort Worth starting tomorrow, 6am,\" with a launch geofence map centered on downtown (north toward Saginaw, west past White Settlement, southwest to Benbrook, east edge near Haltom City and Forest Hill). Not a Tesla App reports rides are unsupervised with no safety monitor. Not on Tesla's Oct 21 coming-soon list. The zone is not connected to Dallas. Tesla hasn't said how many cars serve Fort Worth, pricing, or whether Cybercab runs here; vehicle type listed as Model Y until confirmed.",
+      "sources": [
+        "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
+        "https://teslanorth.com/2026/11/01/tesla-robotaxi-fort-worth-launch/",
+        "https://evwire.com/p/tesla-robotaxi-fort-worth-launch-geofence-details",
+        "https://eletric-vehicles.com/tesla/tesla-launches-robotaxi-in-fort-worth-a-city-missing-from-its-next-up-list/",
+        "https://x.com/i/trending/2117089627693842559"
       ],
       "has_page": true
     },
