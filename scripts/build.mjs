@@ -3,6 +3,9 @@ import fs from 'node:fs'; import path from 'node:path';
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const out = path.join(root, 'public');
 const SITE = 'https://cabcount.app';
+// Policy text date. Contact lines stay PLACEHOLDERs until a real address exists.
+const LEGAL_UPDATED = '2026-11-04';
+const LEGAL_UPDATED_LABEL = 'November 4, 2026';
 const seed = JSON.parse(fs.readFileSync(path.join(root, 'data/seed-data.json'), 'utf8'));
 const warnings = [];
 const BUILT = new Date();
@@ -78,10 +81,12 @@ const newsletter = (city = '') => `<section class="card newsletter" id="newslett
 <form class="signup kit-form" action="https://app.kit.com/forms/10069322/subscriptions" method="post" data-kit-form="10069322">
 <input type="email" name="email_address" placeholder="you@email.com" required aria-label="Email">
 <input type="text" name="fields[city]" placeholder="Your city" value="${esc(city)}" aria-label="City">
-<button class="btn" type="submit">Notify me</button><p class="msg small" role="status" aria-live="polite"></p></form><script>document.querySelectorAll('form.kit-form').forEach(function(f){f.addEventListener('submit',function(e){if(!window.fetch||!window.FormData)return;e.preventDefault();var m=f.querySelector('.msg'),b=f.querySelector('button');b.disabled=true;m.textContent='Sending…';fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}}).then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(!r.ok||j.status==='failed')throw j;if(j.status==='quarantined'&&j.url){window.location.href=j.url;return;}m.textContent='Check your inbox to confirm your subscription.';f.reset();var c=f.querySelector('[name="fields[city]"]');if(c)c.value=c.defaultValue;})}).catch(function(){m.textContent='Sorry, something went wrong. Please try again in a moment.';}).finally(function(){b.disabled=false;});});});</script></section>`;
+<button class="btn" type="submit">Notify me</button><p class="msg small" role="status" aria-live="polite"></p></form>
+<p class="small consent">Unsubscribe anytime. Your email and city are sent to Kit so we can deliver these alerts. <a href="/privacy">Privacy</a>.</p>
+<script>document.querySelectorAll('form.kit-form').forEach(function(f){f.addEventListener('submit',function(e){if(!window.fetch||!window.FormData)return;e.preventDefault();var m=f.querySelector('.msg'),b=f.querySelector('button');b.disabled=true;m.textContent='Sending…';fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}}).then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(!r.ok||j.status==='failed')throw j;if(j.status==='quarantined'&&j.url){window.location.href=j.url;return;}m.textContent='Check your inbox to confirm your subscription.';f.reset();var c=f.querySelector('[name="fields[city]"]');if(c)c.value=c.defaultValue;})}).catch(function(){m.textContent='Sorry, something went wrong. Please try again in a moment.';}).finally(function(){b.disabled=false;});});});</script></section>`;
 const sponsor = `<aside class="card sponsor"><span class="small muted">SPONSOR</span><h3>Sponsor CabCount</h3><p>Reach Robotaxi-curious readers every week. <a href="/about.html#sponsor">Learn more</a></p><!-- SPONSOR SLOT PLACEHOLDER --></aside>`;
 const foot = (scripts = '') => `<footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
-<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>${scripts}</body></html>`;
+<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/privacy">Privacy</a> · <a href="/dmca">Copyright / DMCA</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>${scripts}</body></html>`;
 const freshness = () => `<div class="freshness"><p class="checked">Last checked: <time datetime="${BUILT.toISOString()}">${checkedPT}</time></p><p class="small muted">Numbers last changed: <time datetime="${seed.meta.compiled}">${fmtDate(seed.meta.compiled)}</time></p></div>`;
 const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
 const srcList = s => `<ul class="sources">${s.map(u => `<li><a href="${esc(u)}" rel="noopener nofollow" target="_blank">${esc(host(u))}</a> <span class="muted small">${esc(u.length > 70 ? u.slice(0, 70) + '…' : u)}</span></li>`).join('')}</ul>`;
@@ -144,14 +149,27 @@ fs.writeFileSync(path.join(out, 'sightings.html'), head({ title: 'Report a Robot
 <main><section class="hero left"><h1>Spotted a Robotaxi or Cybercab?</h1>
 <p class="lede">Send us a photo, video or link. Every submission is <strong>reviewed by a human before it goes on the map</strong> — we check location, date and that it's really a Tesla test vehicle.</p></section>
 <section class="card"><h2>Submit a sighting</h2>
+<p id="submit-agree">By submitting you agree to the <a href="#submission-terms">Submission Terms</a>: you own or have the rights to the photo, video, or other media; you grant CabCount a license to display it; it is not illegal or infringing; and we may remove it.</p>
+<div class="check-row"><input type="checkbox" id="sighting-agree" name="agree_terms"><label for="sighting-agree">I agree to the Submission Terms.</label> <a href="#submission-terms">Read the Submission Terms</a></div>
 <!-- ===== TALLY EMBED PLACEHOLDER =====
   Replace the div below with your Tally embed, e.g.
   <iframe data-tally-src="https://tally.so/embed/YOUR_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1" loading="lazy" width="100%" height="600" frameborder="0" title="CabCount sighting"></iframe>
   <script async src="https://tally.so/widgets/embed.js"></script>
   Suggested fields: city, date/time, location (cross streets), vehicle type (Model Y / Cybercab), driver seat occupied?, photo/video upload or link, email (optional).
 ===================================== -->
-<div id="tally-embed"><iframe data-tally-src="https://tally.so/embed/7XlGB6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" title="Report a Robotaxi sighting"></iframe><script async src="https://tally.so/widgets/embed.js"></script><p class="small">Form not loading? <a href="https://tally.so/r/7XlGB6">Open it here</a>.</p></div>
-<h3>What happens next</h3><ol><li>We verify the date, place and vehicle.</li><li>Confirmed sightings appear on the map as <em>Testing / Sightings</em>.</li><li>We never publish your email; photo credit is optional.</li></ol></section>
+<div id="tally-embed" class="gated"><p id="gate-note" class="small gate-note">Check “I agree to the Submission Terms” above to use this form.</p><iframe data-tally-src="https://tally.so/embed/7XlGB6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" title="Report a Robotaxi sighting"></iframe><script async src="https://tally.so/widgets/embed.js"></script></div>
+<p class="small">Form not loading? <a href="https://tally.so/r/7XlGB6" rel="noopener" target="_blank">Open it here</a>. That is the same form. By submitting you agree to the <a href="#submission-terms">Submission Terms</a>.</p>
+<script>(function(){var box=document.getElementById('sighting-agree'),gate=document.getElementById('tally-embed');if(!box||!gate)return;function sync(){var on=!box.checked;gate.classList.toggle('is-locked',on);gate.setAttribute('aria-disabled',on?'true':'false');}box.addEventListener('change',sync);sync();})();</script>
+<h3>What happens next</h3><ol><li>We verify the date, place and vehicle.</li><li>Confirmed sightings appear on the map as <em>Testing / Sightings</em>.</li><li>We never publish your email.</li><li>We may remove a submission. See the <a href="#submission-terms">Submission Terms</a>.</li></ol></section>
+<section class="card" id="submission-terms"><h2>Submission Terms</h2>
+<p>These terms apply when you send CabCount a sighting, including a photo, video, or link. By submitting you agree to them.</p>
+<ol>
+<li><strong>You own it or you have the rights.</strong> You confirm that you own the media you submit, or that you have the rights needed to submit it and to let us display it.</li>
+<li><strong>License to display.</strong> You grant CabCount a non-exclusive, royalty-free license to display the submission on cabcount.app in connection with that sighting, including the hosting and reproduction needed to show it on the site, for as long as it stays on the site.</li>
+<li><strong>No illegal or infringing content.</strong> You will not submit anything illegal, or anything that infringes someone else's copyright or other rights.</li>
+<li><strong>We may remove anything.</strong> We may refuse, unpublish, or remove a submission for any reason, including these terms or a copyright complaint. Copyright notices go to the <a href="/dmca">Copyright / DMCA</a> page. Personal-information requests go to the <a href="/privacy">Privacy</a> page.</li>
+</ol>
+<p>A person reviews a submission before it goes on the map. We do not publish the email address included with a sighting.</p></section>
 ${newsletter()}</main>` + foot());
 
 // ---------- about ----------
@@ -168,8 +186,109 @@ fs.writeFileSync(path.join(out, 'about.html'), head({ title: 'About CabCount & s
 <section class="card" id="sponsor"><h2>Sponsor CabCount</h2><p>Sponsorship slots on the homepage, city pages and weekly email. <!-- SPONSOR CONTACT PLACEHOLDER: add contact email/form before launch --> Contact details coming soon.</p></section>
 <p><a href="https://beam42.space">beam42.space</a> · <a href="https://www.youtube.com/@beam42space">Beam42 on YouTube</a></p></main>` + foot());
 
+// ---------- privacy / DMCA / 404 ----------
+// Flat privacy.html and dmca.html are what Cloudflare Pages serves at /privacy and /dmca
+// (it redirects the .html URL to the extensionless one). A top-level 404.html is required:
+// without it, Pages treats the project as a single-page app and serves index.html for any
+// path that is not a real file, which is why /privacy used to be the homepage.
+const contactPlaceholder = `<div class="placeholder-box"><h3>PLACEHOLDER — contact not set</h3>
+<p>These fields are placeholders. They are not a working email or mailing address. Do not send a request to them.</p>
+<dl>
+<dt>Email</dt><dd>[PLACEHOLDER: privacy contact email]</dd>
+<dt>Mail</dt><dd>[PLACEHOLDER: mailing address]</dd>
+</dl></div>`;
+fs.writeFileSync(path.join(out, 'privacy.html'), head({ title: 'Privacy | CabCount', desc: 'What CabCount collects: sighting submissions, Get alerts email via Kit, and cookieless Cloudflare Web Analytics. Processors, retention, deletion, and children under 13.', url: '/privacy' }) + `
+<main class="legal"><section class="hero left"><h1>Privacy</h1>
+<p class="lede">What CabCount collects, who processes it, how long it is kept, and how to ask for deletion.</p>
+<p>Last updated: <time datetime="${LEGAL_UPDATED}">${LEGAL_UPDATED_LABEL}</time></p></section>
+<section class="card"><h2>Who we are</h2>
+<p>CabCount (<a href="https://cabcount.app">cabcount.app</a>) is an independent tracker of Tesla Robotaxi and Cybercab rollout, published by Beam42. CabCount is not affiliated with Tesla, Inc.</p>
+<p>This page covers cabcount.app only.</p></section>
+<section class="card"><h2>Information we collect</h2>
+<h3>Sighting photo and video submissions</h3>
+<p>The sightings page embeds a form hosted by Tally (<a href="https://tally.so/r/7XlGB6" rel="noopener" target="_blank">tally.so/r/7XlGB6</a>). If you submit a sighting, we collect the city, the date you saw the vehicle, what you saw (including whether a driver or safety monitor was present), any details you type, a photo or video link, and an optional email address if you want a follow-up. The details box is free text, so it can include other submitter information you choose to add. We do not publish the email address. A person reviews a submission before anything is added to the map.</p>
+<h3>Get alerts email</h3>
+<p>The “Get alerts” form posts to Kit at <a href="https://app.kit.com/forms/10069322" rel="noopener" target="_blank">https://app.kit.com/forms/10069322</a> (the subscription endpoint is <a href="https://app.kit.com/forms/10069322/subscriptions" rel="noopener" target="_blank">/subscriptions</a>). We collect the email address you enter and the city you type, if you type one. Kit sends a confirmation email. Unsubscribe anytime, from a link in those emails or by asking us.</p>
+<h3>Cloudflare Web Analytics</h3>
+<p>CabCount uses Cloudflare Web Analytics. It is cookieless and does no session recording. It does not use advertising cookies. We do not use it to build a profile of you.</p>
+<h3>Hosting</h3>
+<p>Cloudflare serves the site. Like other hosts, it processes the technical data needed to deliver the page and protect the site, including IP address and the page requested. That is separate from the cookieless analytics above.</p>
+<p>We do not sell personal information. We do not run a CabCount account system.</p></section>
+<section class="card"><h2>Processors and storage</h2>
+<ul>
+<li><strong>Kit</strong> (the form at app.kit.com/forms/10069322) stores alert subscriptions and sends the emails.</li>
+<li><strong>Tally</strong> (tally.so) stores sighting submissions, including the photo or video link, the details you type, and the optional follow-up email, until they are deleted.</li>
+<li><strong>Cloudflare</strong> hosts cabcount.app, serves the published pages, and provides Cloudflare Web Analytics. A sighting we choose to publish becomes part of the site stored with Cloudflare. We do not keep a separate copy of submissions in our own database; this project has none.</li>
+</ul></section>
+<section class="card"><h2>Retention</h2>
+<ul>
+<li><strong>Alerts.</strong> Kit keeps the subscription until you unsubscribe or we delete it after a request.</li>
+<li><strong>Sightings.</strong> Tally keeps the submission, including any photo or video link, until we delete it or you ask us to. If we publish a description or media from it, we keep that published copy until we take it down or you ask us to delete it. We do not publish the email from a sighting.</li>
+<li><strong>Analytics.</strong> We do not receive a file of identified visitors from Cloudflare Web Analytics, and we do not set our own retention period for it. There is no session recording to retain.</li>
+<li><strong>Delivery logs.</strong> Cloudflare may keep connection logs for security and operations on its own schedule. We do not copy those logs into a CabCount database.</li>
+</ul></section>
+<section class="card"><h2>Deletion requests</h2>
+<p>Email the privacy contact below and say what you want deleted: the email you used for alerts, the sighting you sent, or both. Include enough detail for us to find the record, such as the email address or the page URL. We will delete personal information we hold and ask Kit or Tally to delete the matching record. We may keep a short note that we received and completed the request. We may decline when the law requires us to keep the information, or when we cannot tell which record is yours.</p>
+${contactPlaceholder}</section>
+<section class="card"><h2>Not for children under 13</h2>
+<p>CabCount is not for children under 13. Do not submit a sighting, an email address, or other personal information if you are under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has given us personal information, email the privacy contact and we will delete it.</p></section>
+<section class="card"><h2>Contact</h2>
+<p>Privacy questions and deletion requests go to the contact below. Copyright notices go to the <a href="/dmca">Copyright / DMCA</a> page. Both contacts are still placeholders.</p>
+${contactPlaceholder}
+<p>Last updated: <time datetime="${LEGAL_UPDATED}">${LEGAL_UPDATED_LABEL}</time></p></section>
+</main>` + foot());
+
+const agentPlaceholder = `<div class="placeholder-box"><h3>PLACEHOLDER — designated DMCA agent not registered yet</h3>
+<p>The designated agent has not been registered with the U.S. Copyright Office. Every field below is a PLACEHOLDER. None of them is a working name, address, email, or phone. Do not send a notice to these placeholders. This page will be updated with the registered agent’s details after registration.</p>
+<dl>
+<dt>Name</dt><dd>[PLACEHOLDER: agent name]</dd>
+<dt>Address</dt><dd>[PLACEHOLDER: street address, city, region, postal code, country]</dd>
+<dt>Email</dt><dd>[PLACEHOLDER: agent email]</dd>
+<dt>Phone</dt><dd>[PLACEHOLDER: agent phone]</dd>
+</dl></div>`;
+fs.writeFileSync(path.join(out, 'dmca.html'), head({ title: 'Copyright / DMCA | CabCount', desc: 'How to send a DMCA takedown notice or counter-notice to CabCount, the repeat-infringer policy, and the designated agent placeholder.', url: '/dmca' }) + `
+<main class="legal"><section class="hero left"><h1>Copyright / DMCA</h1>
+<p class="lede">How to ask CabCount to remove material you believe infringes a copyright, and how a submitter can send a counter-notice.</p>
+<p>Last updated: <time datetime="${LEGAL_UPDATED}">${LEGAL_UPDATED_LABEL}</time></p></section>
+<section class="card"><h2>Designated agent</h2>
+<p>Under the Digital Millennium Copyright Act, a takedown notice for material on cabcount.app should be sent to the designated agent below. The agent is not registered yet.</p>
+${agentPlaceholder}</section>
+<section class="card"><h2>How to send a takedown notice</h2>
+<p>Send a written notice that includes every element required by 17 U.S.C. § 512(c)(3). A notice that leaves one out may not be effective. We may still remove material that breaks the <a href="/sightings.html#submission-terms">Submission Terms</a>.</p>
+<ol>
+<li><strong>Signature.</strong> A physical or electronic signature of the person authorized to act for the owner of the exclusive right that is allegedly infringed.</li>
+<li><strong>The copyrighted work.</strong> Identification of the copyrighted work you claim has been infringed. If the notice covers many works on this site, a representative list of those works is enough.</li>
+<li><strong>The material on CabCount.</strong> Identification of the material you claim is infringing, and information reasonably sufficient for us to find it, such as the page URL.</li>
+<li><strong>How to reach you.</strong> Information reasonably sufficient for us to contact you, such as your address, telephone number, and, if you have one, an email address.</li>
+<li><strong>Good-faith belief.</strong> A statement that you have a good-faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.</li>
+<li><strong>Accuracy and authority.</strong> A statement that the information in the notice is accurate, and under penalty of perjury, that you are authorized to act for the owner of an exclusive right that is allegedly infringed.</li>
+</ol>
+<p>Send the completed notice to the designated agent once that agent’s name, address, email, and phone replace the placeholders above. A notice that knowingly misrepresents that material is infringing can have legal consequences.</p>
+<p>If a notice is complete, we will remove or disable access to the material it identifies and, when we can, tell the person who submitted it.</p></section>
+<section class="card"><h2>Counter-notice</h2>
+<p>If you submitted material that we removed because of a takedown notice, you may send a counter-notice to the same designated agent. A counter-notice must include the elements required by 17 U.S.C. § 512(g)(3):</p>
+<ol>
+<li>Your physical or electronic signature.</li>
+<li>Identification of the material that was removed, and the location (URL) where it appeared before it was removed.</li>
+<li>A statement under penalty of perjury that you have a good-faith belief that the material was removed or disabled as a result of mistake or misidentification.</li>
+<li>Your name, address, and telephone number, and a statement that you consent to the jurisdiction of the Federal District Court for the judicial district of your address, or if your address is outside the United States, for any judicial district in which CabCount may be found, and that you will accept service of process from the person who sent the original notice or that person’s agent.</li>
+</ol>
+<p>If we receive a valid counter-notice, we will send a copy to the person who filed the original notice and tell them that we will restore the material in 10 to 14 business days unless they notify us that they have filed a court action seeking a court order to restrain the person who submitted the material.</p></section>
+<section class="card"><h2>Repeat-infringer policy</h2>
+<p>CabCount does not offer accounts. When we remove material because of a notice, we record the notice and the submitter details we have, such as an email address sent with the sighting. In appropriate circumstances, including when the same person repeatedly submits infringing material, we will refuse further submissions from that person and remove their material from the site.</p>
+<p>We may also remove any submission under the <a href="/sightings.html#submission-terms">Submission Terms</a>, with or without a formal notice.</p>
+<p>Last updated: <time datetime="${LEGAL_UPDATED}">${LEGAL_UPDATED_LABEL}</time></p></section>
+</main>` + foot());
+
+fs.writeFileSync(path.join(out, '404.html'), head({ title: 'Page not found | CabCount', desc: 'That CabCount page does not exist.', url: '/404' }) + `
+<main class="legal"><section class="hero left"><h1>Page not found</h1>
+<p class="lede">That address is not a page on CabCount. Unknown addresses are not the homepage.</p>
+<p><a href="/">Back to the map</a> · <a href="/privacy">Privacy</a> · <a href="/dmca">Copyright / DMCA</a></p></section></main>` + foot());
+
+pages.push('/privacy', '/dmca');
+
 // ---------- sitemap / robots ----------
-fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p => `  <url><loc>${SITE}${p}</loc><lastmod>${seed.meta.compiled}</lastmod></url>`).join('\n')}\n</urlset>\n`);
+fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p => `  <url><loc>${SITE}${p}</loc><lastmod>${p === '/privacy' || p === '/dmca' ? LEGAL_UPDATED : seed.meta.compiled}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 console.log(`Built ${pages.length} pages, ${cities.length} map points.`);
 if (warnings.length) console.log('Data warnings:\n - ' + warnings.join('\n - '));
