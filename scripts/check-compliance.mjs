@@ -22,10 +22,10 @@ check('privacy is not the homepage', !privacy.includes('Is Robotaxi coming to'))
 check('privacy heading', privacy.includes('<h1>Privacy</h1>'));
 check('privacy sighting media', /photo/i.test(privacy) && /video/i.test(privacy));
 check('privacy submitter info', /submitter information/i.test(privacy) && /email address/i.test(privacy));
-check('privacy kit form', privacy.includes('https://app.kit.com/forms/10069322'));
+check('privacy has no kit or alerts', !/kit|Get alerts|newsletter|Unsubscribe anytime/i.test(privacy));
 check('privacy analytics cookieless', /Cloudflare Web Analytics/.test(privacy) && /cookieless/i.test(privacy));
 check('privacy no session recording', /no session recording/i.test(privacy));
-check('privacy processors', /<strong>Kit<\/strong>/.test(privacy) && /<strong>Cloudflare<\/strong>/.test(privacy) && /<strong>Tally<\/strong>/.test(privacy));
+check('privacy processors', !/<strong>Kit<\/strong>/.test(privacy) && /<strong>Cloudflare<\/strong>/.test(privacy) && /<strong>Tally<\/strong>/.test(privacy));
 check('privacy retention', privacy.includes('<h2>Retention</h2>'));
 check('privacy deletion', privacy.includes('<h2>Deletion requests</h2>'));
 check('privacy children', privacy.includes('<h2>Not for children under 13</h2>'));
@@ -60,7 +60,7 @@ check('sightings by submitting you agree', /By submitting you agree/.test(sight)
 check('sightings terms link', sight.includes('href="#submission-terms"'));
 check('sightings terms section', sight.includes('id="submission-terms"'));
 
-check('alerts consent', /Unsubscribe anytime/.test(home) && /<a href="\/privacy">Privacy<\/a>/.test(home));
+check('home has no signup', !/kit-form|Get alerts|Get alerted|app\.kit\.com|id="newsletter"/i.test(home));
 check('footer privacy', home.includes('href="/privacy">Privacy'));
 check('footer dmca', home.includes('href="/dmca">Copyright / DMCA'));
 
@@ -90,9 +90,7 @@ for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   const rel = path.relative(pub, file);
   check('footer ' + rel, html.includes('href="/privacy"') && html.includes('href="/dmca"'));
-  if (html.includes('class="signup kit-form"')) {
-    check('consent ' + rel, /Unsubscribe anytime/.test(html) && /href="\/privacy"/.test(html));
-  }
+  check('no email signup ' + rel, !/kit-form|app\.kit\.com|Get alerts|Get alerted|id="newsletter"|Unsubscribe anytime/i.test(html));
 }
 
 if (failed) {

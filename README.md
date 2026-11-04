@@ -5,7 +5,7 @@ Static Tesla Robotaxi / Cybercab rollout tracker. Plain HTML/CSS/JS, Leaflet + O
 ## Layout
 - `data/seed-data.json`: **the source of truth you edit**
 - `scripts/build.mjs`: turns the seed into `public/data/cities.json` + `public/data/fleet.json`, then writes `public/index.html`, `public/city/<slug>.html`, `sightings.html`, `about.html`, `privacy.html` (served at `/privacy`), `dmca.html` (served at `/dmca`), `404.html` (this file stops Cloudflare Pages from serving the homepage for unknown URLs), `sitemap.xml`, `robots.txt`. It also prints data warnings.
-- `npm test` checks that the built pages include the privacy, DMCA, submission-terms, and alert-consent text. Run `npm run build` first.
+- `npm test` checks that the built pages include the privacy, DMCA, and submission-terms text, and that the Kit sign-up form is gone. Run `npm run build` first.
 - `scripts/make_images.py`: regenerates `public/assets/og.png` (share card with live numbers), favicon.ico, and apple-touch-icon (needs Python + Pillow; run it locally, then commit the images).
 - `public/`: the deployable output (css/, js/, vendor/, assets/, favicon.svg, _headers)
 
@@ -21,7 +21,6 @@ Static Tesla Robotaxi / Cybercab rollout tracker. Plain HTML/CSS/JS, Leaflet + O
 4. Commit and push. Cloudflare Pages rebuilds on its own.
 
 ## Placeholders to fill before launch
-- **Kit (ConvertKit)**: in `newsletter()` in `scripts/build.mjs`, set the form action to `https://app.kit.com/forms/<FORM_ID>/subscriptions` (fields `email_address`, `fields[city]`; create a `city` custom field in Kit), or paste Kit's embed in its place.
 - **Tally**: in the sightings section of `build.mjs`, replace `#tally-embed` with the Tally iframe (see the HTML comment).
 - **Sponsor**: the `sponsor` block, plus the contact line on the About page.
 - **Privacy contact and DMCA agent**: the privacy email is `kevinrey24@gmail.com` and the mailing address is Kevin Rey, 14016 106th Ave Ct E, Puyallup, WA 98374. The DMCA agent (name, address, email, and phone) is still PLACEHOLDER in `scripts/build.mjs`. The agent is not registered yet. Replace those placeholders before accepting notices. Do not invent an address in the page.

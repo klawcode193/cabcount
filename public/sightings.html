@@ -7,7 +7,7 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Report a Robotaxi or Cybercab sighting | CabCount"><meta name="twitter:description" content="Spotted a Tesla Robotaxi or Cybercab testing in your city? Send it to CabCount. Submissions are reviewed before they go on the map."><meta name="twitter:image" content="https://cabcount.app/assets/og.png">
 <link rel="stylesheet" href="/css/style.css"></head><body>
 <header class="nav"><a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26"> CabCount</a>
-<nav><a href="/#map">Map</a><a href="/sightings.html">Sightings</a><a href="/about.html">About</a><a class="btn sm" href="#newsletter">Get alerts</a></nav></header>
+<nav><a href="/#map">Map</a><a href="/sightings.html">Sightings</a><a href="/about.html">About</a></nav></header>
 <main><section class="hero left"><h1>Spotted a Robotaxi or Cybercab?</h1>
 <p class="lede">Send us a photo, video or link. Every submission is <strong>reviewed by a human before it goes on the map</strong> — we check location, date and that it's really a Tesla test vehicle.</p></section>
 <section class="card"><h2>Submit a sighting</h2>
@@ -32,12 +32,5 @@
 <li><strong>We may remove anything.</strong> We may refuse, unpublish, or remove a submission for any reason, including these terms or a copyright complaint. Copyright notices go to the <a href="/dmca">Copyright / DMCA</a> page. Personal-information requests go to the <a href="/privacy">Privacy</a> page.</li>
 </ol>
 <p>A person reviews a submission before it goes on the map. We do not publish the email address included with a sighting.</p></section>
-<section class="card newsletter" id="newsletter"><h2>Get the weekly CabCount</h2>
-<p>New cities, geofence expansions and Cybercab counts. One email a week, no spam.</p>
-<form class="signup kit-form" action="https://app.kit.com/forms/10069322/subscriptions" method="post" data-kit-form="10069322">
-<input type="email" name="email_address" placeholder="you@email.com" required aria-label="Email">
-<input type="text" name="fields[city]" placeholder="Your city" value="" aria-label="City">
-<button class="btn" type="submit">Notify me</button><p class="msg small" role="status" aria-live="polite"></p></form>
-<p class="small consent">Unsubscribe anytime. Your email and city are sent to Kit so we can deliver these alerts. <a href="/privacy">Privacy</a>.</p>
-<script>document.querySelectorAll('form.kit-form').forEach(function(f){f.addEventListener('submit',function(e){if(!window.fetch||!window.FormData)return;e.preventDefault();var m=f.querySelector('.msg'),b=f.querySelector('button');b.disabled=true;m.textContent='Sending…';fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}}).then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(!r.ok||j.status==='failed')throw j;if(j.status==='quarantined'&&j.url){window.location.href=j.url;return;}m.textContent='Check your inbox to confirm your subscription.';f.reset();var c=f.querySelector('[name="fields[city]"]');if(c)c.value=c.defaultValue;})}).catch(function(){m.textContent='Sorry, something went wrong. Please try again in a moment.';}).finally(function(){b.disabled=false;});});});</script></section></main><footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
+</main><footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
 <p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/privacy">Privacy</a> · <a href="/dmca">Copyright / DMCA</a> · <a href="/sitemap.xml">Sitemap</a></p></footer></body></html>
