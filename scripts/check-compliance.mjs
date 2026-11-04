@@ -29,10 +29,11 @@ check('privacy processors', /<strong>Kit<\/strong>/.test(privacy) && /<strong>Cl
 check('privacy retention', privacy.includes('<h2>Retention</h2>'));
 check('privacy deletion', privacy.includes('<h2>Deletion requests</h2>'));
 check('privacy children', privacy.includes('<h2>Not for children under 13</h2>'));
-check('privacy contact placeholders', privacy.includes('[PLACEHOLDER: privacy contact email]') && privacy.includes('[PLACEHOLDER: mailing address]'));
+check('privacy contact email', privacy.includes('<a href="mailto:kevinrey24@gmail.com">kevinrey24@gmail.com</a>'));
+check('privacy mailing address still placeholder', privacy.includes('[PLACEHOLDER: mailing address]'));
 check('privacy date', privacy.includes('datetime="2026-11-04"') && privacy.includes('November 4, 2026'));
 check('privacy canonical', privacy.includes('href="https://cabcount.app/privacy"'));
-check('privacy has no invented email', !/@[a-z0-9.-]+\.[a-z]{2,}/i.test(privacy));
+check('privacy has no other email', !/@[a-z0-9.-]+\.[a-z]{2,}/i.test(privacy.replaceAll('kevinrey24@gmail.com', '')));
 
 check('dmca heading', dmca.includes('<h1>Copyright / DMCA</h1>'));
 check('dmca agent not registered', /not registered/i.test(dmca));
