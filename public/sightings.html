@@ -7,22 +7,30 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Report a Robotaxi or Cybercab sighting | CabCount"><meta name="twitter:description" content="Spotted a Tesla Robotaxi or Cybercab testing in your city? Send it to CabCount. Submissions are reviewed before they go on the map."><meta name="twitter:image" content="https://cabcount.app/assets/og.png">
 <link rel="stylesheet" href="/css/style.css"></head><body>
 <header class="nav"><a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26"> CabCount</a>
-<nav><a href="/#map">Map</a><a href="/sightings.html">Sightings</a><a href="/about.html">About</a><a class="btn sm" href="#newsletter">Get alerts</a></nav></header>
+<nav><a href="/#map">Map</a><a href="/sightings.html">Sightings</a><a href="/about.html">About</a></nav></header>
 <main><section class="hero left"><h1>Spotted a Robotaxi or Cybercab?</h1>
 <p class="lede">Send us a photo, video or link. Every submission is <strong>reviewed by a human before it goes on the map</strong> — we check location, date and that it's really a Tesla test vehicle.</p></section>
 <section class="card"><h2>Submit a sighting</h2>
+<p id="submit-agree">By submitting you agree to the <a href="#submission-terms">Submission Terms</a>: you own or have the rights to the photo, video, or other media; you grant CabCount a license to display it; it is not illegal or infringing; and we may remove it.</p>
+<div class="check-row"><input type="checkbox" id="sighting-agree" name="agree_terms"><label for="sighting-agree">I agree to the Submission Terms.</label> <a href="#submission-terms">Read the Submission Terms</a></div>
 <!-- ===== TALLY EMBED PLACEHOLDER =====
   Replace the div below with your Tally embed, e.g.
   <iframe data-tally-src="https://tally.so/embed/YOUR_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1" loading="lazy" width="100%" height="600" frameborder="0" title="CabCount sighting"></iframe>
   <script async src="https://tally.so/widgets/embed.js"></script>
   Suggested fields: city, date/time, location (cross streets), vehicle type (Model Y / Cybercab), driver seat occupied?, photo/video upload or link, email (optional).
 ===================================== -->
-<div id="tally-embed"><iframe data-tally-src="https://tally.so/embed/7XlGB6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" title="Report a Robotaxi sighting"></iframe><script async src="https://tally.so/widgets/embed.js"></script><p class="small">Form not loading? <a href="https://tally.so/r/7XlGB6">Open it here</a>.</p></div>
-<h3>What happens next</h3><ol><li>We verify the date, place and vehicle.</li><li>Confirmed sightings appear on the map as <em>Testing / Sightings</em>.</li><li>We never publish your email; photo credit is optional.</li></ol></section>
-<section class="card newsletter" id="newsletter"><h2>Get the weekly CabCount</h2>
-<p>New cities, geofence expansions and Cybercab counts. One email a week, no spam.</p>
-<form class="signup kit-form" action="https://app.kit.com/forms/10069322/subscriptions" method="post" data-kit-form="10069322">
-<input type="email" name="email_address" placeholder="you@email.com" required aria-label="Email">
-<input type="text" name="fields[city]" placeholder="Your city" value="" aria-label="City">
-<button class="btn" type="submit">Notify me</button><p class="msg small" role="status" aria-live="polite"></p></form><script>document.querySelectorAll('form.kit-form').forEach(function(f){f.addEventListener('submit',function(e){if(!window.fetch||!window.FormData)return;e.preventDefault();var m=f.querySelector('.msg'),b=f.querySelector('button');b.disabled=true;m.textContent='Sending…';fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}}).then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(!r.ok||j.status==='failed')throw j;if(j.status==='quarantined'&&j.url){window.location.href=j.url;return;}m.textContent='Check your inbox to confirm your subscription.';f.reset();var c=f.querySelector('[name="fields[city]"]');if(c)c.value=c.defaultValue;})}).catch(function(){m.textContent='Sorry, something went wrong. Please try again in a moment.';}).finally(function(){b.disabled=false;});});});</script></section></main><footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
-<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/sitemap.xml">Sitemap</a></p></footer></body></html>
+<div id="tally-embed" class="gated"><p id="gate-note" class="small gate-note">Check “I agree to the Submission Terms” above to use this form.</p><iframe data-tally-src="https://tally.so/embed/7XlGB6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" title="Report a Robotaxi sighting"></iframe><script async src="https://tally.so/widgets/embed.js"></script></div>
+<p class="small">Form not loading? <a href="https://tally.so/r/7XlGB6" rel="noopener" target="_blank">Open it here</a>. That is the same form. By submitting you agree to the <a href="#submission-terms">Submission Terms</a>.</p>
+<script>(function(){var box=document.getElementById('sighting-agree'),gate=document.getElementById('tally-embed');if(!box||!gate)return;function sync(){var on=!box.checked;gate.classList.toggle('is-locked',on);gate.setAttribute('aria-disabled',on?'true':'false');}box.addEventListener('change',sync);sync();})();</script>
+<h3>What happens next</h3><ol><li>We verify the date, place and vehicle.</li><li>Confirmed sightings appear on the map as <em>Testing / Sightings</em>.</li><li>We never publish your email.</li><li>We may remove a submission. See the <a href="#submission-terms">Submission Terms</a>.</li></ol></section>
+<section class="card" id="submission-terms"><h2>Submission Terms</h2>
+<p>These terms apply when you send CabCount a sighting, including a photo, video, or link. By submitting you agree to them.</p>
+<ol>
+<li><strong>You own it or you have the rights.</strong> You confirm that you own the media you submit, or that you have the rights needed to submit it and to let us display it.</li>
+<li><strong>License to display.</strong> You grant CabCount a non-exclusive, royalty-free license to display the submission on cabcount.app in connection with that sighting, including the hosting and reproduction needed to show it on the site, for as long as it stays on the site.</li>
+<li><strong>No illegal or infringing content.</strong> You will not submit anything illegal, or anything that infringes someone else's copyright or other rights.</li>
+<li><strong>We may remove anything.</strong> We may refuse, unpublish, or remove a submission for any reason, including these terms or a copyright complaint. Copyright notices go to the <a href="/dmca">Copyright / DMCA</a> page. Personal-information requests go to the <a href="/privacy">Privacy</a> page.</li>
+</ol>
+<p>A person reviews a submission before it goes on the map. We do not publish the email address included with a sighting.</p></section>
+</main><footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
+<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/privacy">Privacy</a> · <a href="/dmca">Copyright / DMCA</a> · <a href="/sitemap.xml">Sitemap</a></p></footer></body></html>

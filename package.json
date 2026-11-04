@@ -1,1 +1,1 @@
-{"name":"cabcount","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","serve":"npx --yes serve public -l 8080"}}
+{"name":"cabcount","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node scripts/check-compliance.mjs","serve":"npx --yes serve public -l 8080"}}
