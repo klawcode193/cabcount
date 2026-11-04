@@ -191,12 +191,10 @@ fs.writeFileSync(path.join(out, 'about.html'), head({ title: 'About CabCount & s
 // (it redirects the .html URL to the extensionless one). A top-level 404.html is required:
 // without it, Pages treats the project as a single-page app and serves index.html for any
 // path that is not a real file, which is why /privacy used to be the homepage.
-const contactPlaceholder = `<div class="placeholder-box"><h3>PLACEHOLDER — mailing address not set</h3>
-<p>Email the address below for privacy questions and deletion requests. The mailing address is still a placeholder. Do not send mail to it.</p>
-<dl>
+const contactPlaceholder = `<dl>
 <dt>Email</dt><dd><a href="mailto:kevinrey24@gmail.com">kevinrey24@gmail.com</a></dd>
-<dt>Mail</dt><dd>[PLACEHOLDER: mailing address]</dd>
-</dl></div>`;
+<dt>Mail</dt><dd>Kevin Rey, 14016 106th Ave Ct E, Puyallup, WA 98374</dd>
+</dl>`;
 fs.writeFileSync(path.join(out, 'privacy.html'), head({ title: 'Privacy | CabCount', desc: 'What CabCount collects: sighting submissions, Get alerts email via Kit, and cookieless Cloudflare Web Analytics. Processors, retention, deletion, and children under 13.', url: '/privacy' }) + `
 <main class="legal"><section class="hero left"><h1>Privacy</h1>
 <p class="lede">What CabCount collects, who processes it, how long it is kept, and how to ask for deletion.</p>
@@ -233,7 +231,7 @@ ${contactPlaceholder}</section>
 <section class="card"><h2>Not for children under 13</h2>
 <p>CabCount is not for children under 13. Do not submit a sighting, an email address, or other personal information if you are under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has given us personal information, email the privacy contact and we will delete it.</p></section>
 <section class="card"><h2>Contact</h2>
-<p>Privacy questions and deletion requests go to the contact below. Copyright notices go to the <a href="/dmca">Copyright / DMCA</a> page. The mailing address below and the DMCA agent are still placeholders.</p>
+<p>Privacy questions and deletion requests go to the contact below. Copyright notices go to the <a href="/dmca">Copyright / DMCA</a> page. The DMCA agent is still a placeholder.</p>
 ${contactPlaceholder}
 <p>Last updated: <time datetime="${LEGAL_UPDATED}">${LEGAL_UPDATED_LABEL}</time></p></section>
 </main>` + foot());

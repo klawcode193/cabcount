@@ -30,7 +30,7 @@ check('privacy retention', privacy.includes('<h2>Retention</h2>'));
 check('privacy deletion', privacy.includes('<h2>Deletion requests</h2>'));
 check('privacy children', privacy.includes('<h2>Not for children under 13</h2>'));
 check('privacy contact email', privacy.includes('<a href="mailto:kevinrey24@gmail.com">kevinrey24@gmail.com</a>'));
-check('privacy mailing address still placeholder', privacy.includes('[PLACEHOLDER: mailing address]'));
+check('privacy mailing address', privacy.includes('Kevin Rey, 14016 106th Ave Ct E, Puyallup, WA 98374') && !privacy.includes('[PLACEHOLDER: mailing address]'));
 check('privacy date', privacy.includes('datetime="2026-11-04"') && privacy.includes('November 4, 2026'));
 check('privacy canonical', privacy.includes('href="https://cabcount.app/privacy"'));
 check('privacy has no other email', !/@[a-z0-9.-]+\.[a-z]{2,}/i.test(privacy.replaceAll('kevinrey24@gmail.com', '')));
