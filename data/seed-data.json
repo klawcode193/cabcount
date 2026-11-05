@@ -1,7 +1,7 @@
 {
  "meta": {
   "name": "CabCount seed data",
-  "compiled": "2026-11-03",
+  "compiled": "2026-11-05",
   "compiled_tz": "America/Los_Angeles",
   "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
   "status_values": {
@@ -316,6 +316,21 @@
    "notes": "Rumor only: mayor reportedly wants autonomous Tesla shuttles on local roads before end of 2026 (X post, 2026-10-17). Treat as unconfirmed.",
    "sources": [
     "https://x.com/sebaonwheels/status/2111553813660189014"
+   ]
+  },
+  {
+   "id": "detroit-mi",
+   "city": "Detroit",
+   "state": "MI",
+   "country": "US",
+   "lat": 42.3314,
+   "lng": -83.0458,
+   "status": "testing_sightings",
+   "launched": null,
+   "notes": "About two dozen Cybercabs testing on Metro Detroit roads (I-696, M-10, Telegraph, Eight Mile) out of Tesla's Southfield collision center, with temporary steering wheels and human test drivers, per The Detroit News (Nov 3-4, 2026). Tesla has not confirmed it or given a public service date. First cold-weather testing market.",
+   "sources": [
+    "https://www.newstribune.com/news/2026/nov/04/tesla-cybercabs-join-waymo-in-detroit-robotaxi/",
+    "https://theroboticsmedia.com/article/tesla-cybercab-detroit-testing-winter-weather"
    ]
   },
   {

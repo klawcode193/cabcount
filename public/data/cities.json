@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-03",
-  "last_checked": "2026-11-04T15:13:10.455Z",
-  "last_checked_pt": "Nov 4, 2026, 7:13 AM PT",
-  "numbers_last_changed": "2026-11-03",
+  "updated": "2026-11-05",
+  "last_checked": "2026-11-05T15:07:57.971Z",
+  "last_checked_pt": "Nov 5, 2026, 7:07 AM PT",
+  "numbers_last_changed": "2026-11-05",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,7 +26,7 @@
     }
   },
   "summary": {
-    "updated": "2026-11-03",
+    "updated": "2026-11-05",
     "cities_live": 8,
     "service_sq_mi": 1927,
     "cybercabs_registered": 573,
@@ -472,6 +472,34 @@
       "notes": "Rumor only: mayor reportedly wants autonomous Tesla shuttles on local roads before end of 2026 (X post, 2026-10-17). Treat as unconfirmed.",
       "sources": [
         "https://x.com/sebaonwheels/status/2111553813660189014"
+      ],
+      "has_page": true
+    },
+    {
+      "slug": "detroit-mi",
+      "name": "Detroit",
+      "region": "MI",
+      "country": "US",
+      "lat": 42.3314,
+      "lng": -83.0458,
+      "status": "testing_sightings",
+      "status_label": "Testing / Sightings",
+      "launched": null,
+      "unsupervised_since": null,
+      "vehicles": [],
+      "cybercab": false,
+      "cybercab_public_since": null,
+      "cybercab_note": null,
+      "service_area_sq_mi": null,
+      "service_area_as_of": null,
+      "service_area_history": [],
+      "hours": null,
+      "permit_date": null,
+      "permitted_vehicles": null,
+      "notes": "About two dozen Cybercabs testing on Metro Detroit roads (I-696, M-10, Telegraph, Eight Mile) out of Tesla's Southfield collision center, with temporary steering wheels and human test drivers, per The Detroit News (Nov 3-4, 2026). Tesla has not confirmed it or given a public service date. First cold-weather testing market.",
+      "sources": [
+        "https://www.newstribune.com/news/2026/nov/04/tesla-cybercabs-join-waymo-in-detroit-robotaxi/",
+        "https://theroboticsmedia.com/article/tesla-cybercab-detroit-testing-winter-weather"
       ],
       "has_page": true
     },
