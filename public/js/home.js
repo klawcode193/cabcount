@@ -8,7 +8,7 @@
   [...cd.cities].sort((a,b)=>order.indexOf(b.status)-order.indexOf(a.status)).forEach(c=>{
     const s=S[c.status],live=c.status.startsWith('live');
     const area=c.service_area_sq_mi?`<br>~${c.service_area_sq_mi} sq mi (est.)`:'';
-    const link=c.has_page?`<br><a href="/city/${c.slug}.html">Details →</a>`:`<br><a href="${esc(c.sources[0])}" target="_blank" rel="noopener nofollow">Request on X</a> · <a href="#newsletter">Get alerted</a>`;
+    const link=c.has_page?`<br><a href="/city/${c.slug}.html">Details →</a>`:`<br><a href="${esc(c.sources[0])}" target="_blank" rel="noopener nofollow">Request on X</a>`;
     L.circleMarker([c.lat,c.lng],{radius:live?9:7,color:'#0b0f17',weight:2,fillColor:s.color,fillOpacity:.95}).addTo(map)
      .bindPopup(`<b>${esc(c.name)}${c.region?', '+esc(c.region):''}</b><br><span style="color:${s.color}">${s.label}</span>${area}${link}`);
   });

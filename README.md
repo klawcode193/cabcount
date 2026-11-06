@@ -4,7 +4,8 @@ Static Tesla Robotaxi / Cybercab rollout tracker. Plain HTML/CSS/JS, Leaflet + O
 
 ## Layout
 - `data/seed-data.json`: **the source of truth you edit**
-- `scripts/build.mjs`: turns the seed into `public/data/cities.json` + `public/data/fleet.json`, then writes `public/index.html`, `public/city/<slug>.html`, `sightings.html`, `about.html`, `sitemap.xml`, `robots.txt`. It also prints data warnings.
+- `scripts/build.mjs`: turns the seed into `public/data/cities.json` + `public/data/fleet.json`, then writes `public/index.html`, `public/city/<slug>.html`, `sightings.html`, `about.html`, `privacy.html` (served at `/privacy`), `dmca.html` (served at `/dmca`), `404.html`, `sitemap.xml`, `robots.txt`. It also prints data warnings. A top-level `404.html` is required. Without it, Cloudflare Pages treats the project as a single-page app and serves `index.html` for any path that is not a real file, which is why `/privacy` was the homepage.
+- `npm test` checks the built pages and a local model of that Pages routing. Run `npm run build` first. Mailing lists are paused: the site has no signup form, and this repo does not send mail.
 - `scripts/make_images.py`: regenerates `public/assets/og.png` (share card with live numbers), favicon.ico, and apple-touch-icon (needs Python + Pillow; run it locally, then commit the images).
 - `public/`: the deployable output (css/, js/, vendor/, assets/, favicon.svg, _headers)
 
@@ -20,9 +21,10 @@ Static Tesla Robotaxi / Cybercab rollout tracker. Plain HTML/CSS/JS, Leaflet + O
 4. Commit and push. Cloudflare Pages rebuilds on its own.
 
 ## Placeholders to fill before launch
-- **Kit (ConvertKit)**: in `newsletter()` in `scripts/build.mjs`, set the form action to `https://app.kit.com/forms/<FORM_ID>/subscriptions` (fields `email_address`, `fields[city]`; create a `city` custom field in Kit), or paste Kit's embed in its place.
-- **Tally**: in the sightings section of `build.mjs`, replace `#tally-embed` with the Tally iframe (see the HTML comment).
+- **Mailing lists are paused.** Do not add a signup form or send the drafts in `newsletter/`.
+- **Tally**: the sightings page embeds form `7XlGB6`. The privacy page describes the fields that form showed on November 6, 2026. If the form changes, update that description.
 - **Sponsor**: the `sponsor` block, plus the contact line on the About page.
+- **Privacy contact**: `kevinrey24@gmail.com` and Kevin Rey, 14016 106th Ave Ct E, Puyallup, WA 98374, carried from the existing privacy draft. The DMCA agent (name, address, email, and phone) is still PLACEHOLDER in `scripts/build.mjs`. The agent is not registered. Do not invent those fields.
 - Check the YouTube URL (`https://www.youtube.com/@beam42space`) in `foot()`.
 
 ## Cloudflare Pages
