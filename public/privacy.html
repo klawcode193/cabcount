@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy | CabCount</title><meta name="description" content="What cabcount.app does with sighting submissions, map tiles, Cloudflare hosting, and Web Analytics, and what this repository cannot confirm.">
+<link rel="canonical" href="https://cabcount.app/privacy"><meta name="theme-color" content="#0b0f17">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="CabCount"><meta property="og:title" content="Privacy | CabCount"><meta property="og:description" content="What cabcount.app does with sighting submissions, map tiles, Cloudflare hosting, and Web Analytics, and what this repository cannot confirm."><meta property="og:url" content="https://cabcount.app/privacy"><meta property="og:image" content="https://cabcount.app/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Privacy | CabCount"><meta name="twitter:description" content="What cabcount.app does with sighting submissions, map tiles, Cloudflare hosting, and Web Analytics, and what this repository cannot confirm."><meta name="twitter:image" content="https://cabcount.app/assets/og.png">
+<link rel="stylesheet" href="/css/style.css"></head><body>
+<header class="nav"><a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26"> CabCount</a>
+<nav><a href="/#map">Map</a><a href="/sightings.html">Sightings</a><a href="/about.html">About</a></nav></header>
+<main class="legal"><section class="hero left"><h1>Privacy</h1>
+<p class="lede">What this version of cabcount.app does with information, and what this repository cannot confirm.</p>
+<p>Last updated: <time datetime="2026-11-06">November 6, 2026</time></p>
+<p>This page describes the site. It is not a claim that CabCount complies with any particular privacy law.</p></section>
+<section class="card"><h2>Who we are</h2>
+<p>CabCount (<a href="https://cabcount.app">cabcount.app</a>) is an independent tracker of Tesla Robotaxi and Cybercab rollout, published by Beam42. CabCount is not affiliated with Tesla, Inc.</p>
+<p>This page covers cabcount.app only.</p></section>
+<section class="card"><h2>Sighting submissions</h2>
+<p>The sightings page embeds a form hosted by Tally at <a href="https://tally.so/r/7XlGB6" rel="noopener" target="_blank">tally.so/r/7XlGB6</a>. On November 6, 2026 that public form asked for:</p>
+<ul>
+<li><strong>City</strong> (required text)</li>
+<li><strong>Date seen</strong> (required date)</li>
+<li><strong>What did you see?</strong> (required choice): Tesla Robotaxi with no driver, Robotaxi with safety monitor, Cybercab, Test vehicle with sensors, or Other</li>
+<li><strong>Details</strong> (optional text, so it can include whatever you type)</li>
+<li><strong>Photo or video link</strong> (optional). This is a link, not a file upload.</li>
+<li><strong>Your email</strong> (optional), with the form note “Only if we may follow up.”</li>
+</ul>
+<p>The submission is stored by Tally. This repository has no database and no copy of Tally responses. Published city pages are generated from the site data file, which does not include a submitter email. The sightings page says a person reviews a submission before it is added to the map. There is no review queue in this repository; adding a sighting to the map means editing that data file.</p>
+<p>Tally’s own retention, cookies, and access controls are not visible from this repository.</p></section>
+<section class="card"><h2>Email lists</h2>
+<p>Mailing lists are paused. This version of the site has no email signup form and does not send newsletters.</p>
+<p>The site published before this change included a Kit form, id 10069322, that posted an email address and an optional city to Kit. This repository cannot confirm whether anyone used that form, or whether Kit still holds those addresses. Removing the form does not delete anything Kit may already have. Unpublished newsletter drafts in the repository are not a signup and are not sent by this site.</p></section>
+<section class="card"><h2>Map tiles</h2>
+<p>The homepage map is drawn with Leaflet, a script hosted on cabcount.app. The map images are requested from OpenStreetMap at <code>tile.openstreetmap.org</code>. Your browser sends that request, including your IP address, to OpenStreetMap. Chart.js is also a file on cabcount.app. The site does not load fonts from a third party.</p></section>
+<section class="card"><h2>Hosting and Cloudflare Web Analytics</h2>
+<p>Cloudflare Pages serves the site. A request to the live site on November 6, 2026 included Cloudflare response headers. Those headers included a Network Error Logging <code>report-to</code> entry that this repository’s <code>_headers</code> file does not set. The same HTML included a script Cloudflare injects: <code>https://static.cloudflareinsights.com/beacon.min.js</code>.</p>
+<p>That beacon is not stored in this repository. Cloudflare’s documentation says the Web Analytics beacon does not use cookies or localStorage, and that it does not collect visitors’ personal data. The same documentation says the service receives the client IP address as part of the HTTP request and discards that IP at the nearest data center. We have not audited the beacon, and this repository cannot confirm the Cloudflare dashboard setting, including whether visits from the EU are excluded.</p>
+<p>This repository does not include a session-recording script. Cloudflare may keep its own connection logs. We do not copy those logs into a CabCount database, and we do not set their retention period.</p></section>
+<section class="card"><h2>What the repository does not do</h2>
+<ul>
+<li>There is no CabCount account system.</li>
+<li>The site’s own JavaScript does not set a cookie. Pages embedded from Tally, requests to OpenStreetMap, and Cloudflare’s own responses can still set cookies. A check of the homepage response headers on November 6, 2026 did not include <code>Set-Cookie</code>. That single check is not a promise that no cookie is ever set.</li>
+<li>Nothing in this repository sells visitor or submission data.</li>
+</ul></section>
+<section class="card"><h2>Deletion requests</h2>
+<p>Email the privacy contact and identify the sighting, for example by the page URL or the email address on the submission. We can edit or remove text that is published as files on this site. We can ask Tally to delete its copy. Whether Tally deletes it is not something this repository can confirm. We may keep a short note that a request arrived. We may be unable to tell which record is yours.</p>
+<dl>
+<dt>Email</dt><dd><a href="mailto:kevinrey24@gmail.com">kevinrey24@gmail.com</a></dd>
+<dt>Mail</dt><dd>Kevin Rey, 14016 106th Ave Ct E, Puyallup, WA 98374</dd>
+</dl></section>
+<section class="card"><h2>Not for children under 13</h2>
+<p>CabCount is not aimed at children under 13. Do not submit a sighting or an email address if you are under 13. The Tally form in this repository has no age check. If you believe a child under 13 has sent personal information, email the privacy contact and we will remove published material we can identify and ask Tally to delete the submission.</p></section>
+<section class="card"><h2>Contact</h2>
+<p>Privacy questions and deletion requests go to the contact below. Copyright notices go to the <a href="/dmca">Copyright / DMCA</a> page. The DMCA agent fields are still placeholders, and that agent is not registered here.</p>
+<dl>
+<dt>Email</dt><dd><a href="mailto:kevinrey24@gmail.com">kevinrey24@gmail.com</a></dd>
+<dt>Mail</dt><dd>Kevin Rey, 14016 106th Ave Ct E, Puyallup, WA 98374</dd>
+</dl>
+<p>Last updated: <time datetime="2026-11-06">November 6, 2026</time></p></section>
+</main><footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
+<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/privacy">Privacy</a> · <a href="/dmca">Copyright / DMCA</a> · <a href="/sitemap.xml">Sitemap</a></p></footer></body></html>
