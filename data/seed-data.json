@@ -29,8 +29,8 @@
    ],
    "cybercab": true,
    "cybercab_public_since": "2026-09-04",
-   "service_area_sq_mi": 272,
-   "service_area_as_of": "2026-10-26",
+   "service_area_sq_mi": 443,
+   "service_area_as_of": "2026-11-09",
    "service_area_history": [
     {
      "date": "2025-06-22",
@@ -61,6 +61,11 @@
      "date": "2026-10-26",
      "sq_mi": 272,
      "note": "Sawyer Merritt's Oct 26 geofence list on X (after the Oct 22 COTA extension), cited by Not a Tesla App Nov 2 and Basenor; tracker estimate, Tesla publishes no figure"
+    },
+    {
+     "date": "2026-11-09",
+     "sq_mi": 443,
+     "note": "Tesla's @robotaxi said a bigger Austin area is live (no figure); Robotaxi Tracker measures ~442-443 sq mi per Electrek, TeslaNorth and Drive Tesla Canada; robotracker.app shows 435. Tracker estimate, Tesla publishes no figure"
     }
    ],
    "hours": "6am to 2am (official @robotaxi post Oct 30, 2026; Tesla didn't say which cities the new hours cover, and availability can vary by area)",
@@ -74,10 +79,13 @@
     "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm",
     "https://teslanorth.com/2026/10/23/tesla-robotaxi-austin-1am-cota/",
     "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals",
-    "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth"
+    "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
+    "https://electrek.co/2026/11/09/tesla-robotaxi-san-antonio-launch-geofence/",
+    "https://teslanorth.com/2026/11/09/tesla-austin-robotaxi-area-expansion-442/",
+    "https://driveteslacanada.ca/news/tesla-robotaxi-san-antonio-launch-austin-expansion/"
    ],
-   "service_area_note": "2026-10-22: geofence extended southeast to include Circuit of the Americas (app screenshot on X, per TeslaNorth). Now about 272 sq mi per Sawyer Merritt (Oct 26), as cited by Not a Tesla App: https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
-   "notes": "Oct 22, 2026: service area now reaches Circuit of the Americas, and last call moved to 1am. Nov 9, 2026: Tesla said the expanded Austin service area is now live (no figure given); Electrek says Robotaxi Tracker measures it at 443 sq mi, not yet reflected here (https://electrek.co/2026/11/09/tesla-robotaxi-san-antonio-launch-geofence/)."
+   "service_area_note": "2026-11-09: Tesla's @robotaxi account said a bigger Austin service area is now live. About 443 sq mi per Robotaxi Tracker (up ~63% from 272), as reported by Electrek and Drive Tesla Canada; robotracker.app measures 435. Tesla's largest zone again, just ahead of San Antonio's ~274.",
+   "notes": "Oct 22, 2026: service area now reaches Circuit of the Americas, and last call moved to 1am. Nov 9, 2026: Tesla said the expanded Austin service area is now live; trackers put it at about 443 sq mi, Tesla's largest."
   },
   {
    "id": "sf-bay-area-ca",
