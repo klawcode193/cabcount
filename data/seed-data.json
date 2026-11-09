@@ -1,7 +1,7 @@
 {
  "meta": {
   "name": "CabCount seed data",
-  "compiled": "2026-11-05",
+  "compiled": "2026-11-09",
   "compiled_tz": "America/Los_Angeles",
   "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
   "status_values": {
@@ -77,7 +77,7 @@
     "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth"
    ],
    "service_area_note": "2026-10-22: geofence extended southeast to include Circuit of the Americas (app screenshot on X, per TeslaNorth). Now about 272 sq mi per Sawyer Merritt (Oct 26), as cited by Not a Tesla App: https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
-   "notes": "Oct 22, 2026: service area now reaches Circuit of the Americas, and last call moved to 1am."
+   "notes": "Oct 22, 2026: service area now reaches Circuit of the Americas, and last call moved to 1am. Nov 9, 2026: Tesla said the expanded Austin service area is now live (no figure given); Electrek says Robotaxi Tracker measures it at 443 sq mi, not yet reflected here (https://electrek.co/2026/11/09/tesla-robotaxi-san-antonio-launch-geofence/)."
   },
   {
    "id": "sf-bay-area-ca",
@@ -355,13 +355,26 @@
    "country": "US",
    "lat": 29.4241,
    "lng": -98.4936,
-   "status": "preparing",
-   "launched": null,
-   "notes": "Listed as \"coming soon\" on Tesla's new Robotaxi Safety Report page (first reported 2026-10-21); no launch date given. As of 2026-10-24, Tesla's first-responder vehicle lookup assigns 19 Model Y robotaxis to San Antonio (per robotaxitracker.com); no public rides yet.",
+   "status": "live_unsupervised",
+   "launched": "2026-11-09",
+   "notes": "Tesla's @robotaxi account announced Nov 9, 2026 (just after midnight) that Robotaxi is available in San Antonio starting 5am local. Not a Tesla App reports unsupervised rides. Launch geofence about 274 sq mi, from Loop 1604 south to below downtown; airport inside the zone but not served. Tesla hasn't said fleet size, pricing, or whether Cybercab runs here; Robotaxi Tracker had logged no San Antonio cars as of Monday morning.",
    "sources": [
-    "https://www.notateslaapp.com/news/4860/tesla-names-next-robotaxi-cities-shares-miles-driven-safety-data",
-    "https://www.teslaoracle.com/2026/10/23/tesla-announces-robotaxi-launch-in-four-more-cities-releases-safety-data-via-new-website-no-kittens-were-hurt/",
-    "https://robotaxitracker.com/cybercab"
+    "https://www.notateslaapp.com/news/4969/tesla-launches-largest-robotaxi-zone-yet-in-san-antonio",
+    "https://electrek.co/2026/11/09/tesla-robotaxi-san-antonio-launch-geofence/",
+    "https://techcrunch.com/2026/11/09/tesla-expands-robotaxi-service-to-san-antonio/"
+   ],
+   "vehicles": [
+    "Model Y"
+   ],
+   "cybercab": false,
+   "service_area_sq_mi": 274,
+   "service_area_as_of": "2026-11-09",
+   "service_area_history": [
+    {
+     "date": "2026-11-09",
+     "sq_mi": 274,
+     "note": "Launch geofence per Robotaxi Tracker via Electrek (Not a Tesla App says ~275); advertised maximum, bookable area likely smaller"
+    }
    ]
   }
  ],

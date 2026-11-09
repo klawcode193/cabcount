@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-05",
-  "last_checked": "2026-11-08T15:06:58.096Z",
-  "last_checked_pt": "Nov 8, 2026, 7:06 AM PT",
-  "numbers_last_changed": "2026-11-05",
+  "updated": "2026-11-09",
+  "last_checked": "2026-11-09T15:07:24.601Z",
+  "last_checked_pt": "Nov 9, 2026, 7:07 AM PT",
+  "numbers_last_changed": "2026-11-09",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,9 +26,9 @@
     }
   },
   "summary": {
-    "updated": "2026-11-05",
-    "cities_live": 8,
-    "service_sq_mi": 1927,
+    "updated": "2026-11-09",
+    "cities_live": 9,
+    "service_sq_mi": 2201,
     "cybercabs_registered": 573,
     "cybercabs_as_of": "2026-11-01",
     "fleet_total": 1244,
@@ -101,7 +101,7 @@
       "hours": "6am to 2am (official @robotaxi post Oct 30, 2026; Tesla didn't say which cities the new hours cover, and availability can vary by area)",
       "permit_date": null,
       "permitted_vehicles": null,
-      "notes": "Oct 22, 2026: service area now reaches Circuit of the Americas, and last call moved to 1am.",
+      "notes": "Oct 22, 2026: service area now reaches Circuit of the Americas, and last call moved to 1am. Nov 9, 2026: Tesla said the expanded Austin service area is now live (no figure given); Electrek says Robotaxi Tracker measures it at 443 sq mi, not yet reflected here (https://electrek.co/2026/11/09/tesla-robotaxi-san-antonio-launch-geofence/).",
       "sources": [
         "https://www.tesla.com/robotaxi",
         "https://robotracker.app/updates?city_id=1&operator_id=1",
@@ -538,25 +538,33 @@
       "country": "US",
       "lat": 29.4241,
       "lng": -98.4936,
-      "status": "preparing",
-      "status_label": "Preparing / Permitted",
-      "launched": null,
+      "status": "live_unsupervised",
+      "status_label": "Live – no monitor",
+      "launched": "2026-11-09",
       "unsupervised_since": null,
-      "vehicles": [],
+      "vehicles": [
+        "Model Y"
+      ],
       "cybercab": false,
       "cybercab_public_since": null,
       "cybercab_note": null,
-      "service_area_sq_mi": null,
-      "service_area_as_of": null,
-      "service_area_history": [],
+      "service_area_sq_mi": 274,
+      "service_area_as_of": "2026-11-09",
+      "service_area_history": [
+        {
+          "date": "2026-11-09",
+          "sq_mi": 274,
+          "note": "Launch geofence per Robotaxi Tracker via Electrek (Not a Tesla App says ~275); advertised maximum, bookable area likely smaller"
+        }
+      ],
       "hours": null,
       "permit_date": null,
       "permitted_vehicles": null,
-      "notes": "Listed as \"coming soon\" on Tesla's new Robotaxi Safety Report page (first reported 2026-10-21); no launch date given. As of 2026-10-24, Tesla's first-responder vehicle lookup assigns 19 Model Y robotaxis to San Antonio (per robotaxitracker.com); no public rides yet.",
+      "notes": "Tesla's @robotaxi account announced Nov 9, 2026 (just after midnight) that Robotaxi is available in San Antonio starting 5am local. Not a Tesla App reports unsupervised rides. Launch geofence about 274 sq mi, from Loop 1604 south to below downtown; airport inside the zone but not served. Tesla hasn't said fleet size, pricing, or whether Cybercab runs here; Robotaxi Tracker had logged no San Antonio cars as of Monday morning.",
       "sources": [
-        "https://www.notateslaapp.com/news/4860/tesla-names-next-robotaxi-cities-shares-miles-driven-safety-data",
-        "https://www.teslaoracle.com/2026/10/23/tesla-announces-robotaxi-launch-in-four-more-cities-releases-safety-data-via-new-website-no-kittens-were-hurt/",
-        "https://robotaxitracker.com/cybercab"
+        "https://www.notateslaapp.com/news/4969/tesla-launches-largest-robotaxi-zone-yet-in-san-antonio",
+        "https://electrek.co/2026/11/09/tesla-robotaxi-san-antonio-launch-geofence/",
+        "https://techcrunch.com/2026/11/09/tesla-expands-robotaxi-service-to-san-antonio/"
       ],
       "has_page": true
     },
