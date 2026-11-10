@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-09",
-  "last_checked": "2026-11-09T17:03:54.159Z",
-  "last_checked_pt": "Nov 9, 2026, 9:03 AM PT",
-  "numbers_last_changed": "2026-11-09",
+  "updated": "2026-11-10",
+  "last_checked": "2026-11-10T14:52:27.804Z",
+  "last_checked_pt": "Nov 10, 2026, 6:52 AM PT",
+  "numbers_last_changed": "2026-11-10",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,12 +26,12 @@
     }
   },
   "summary": {
-    "updated": "2026-11-09",
+    "updated": "2026-11-10",
     "cities_live": 9,
     "service_sq_mi": 2372,
     "cybercabs_registered": 573,
-    "cybercabs_as_of": "2026-11-01",
-    "fleet_total": 1244,
+    "cybercabs_as_of": "2026-11-08",
+    "fleet_total": 1282,
     "other_metrics": {
       "unsupervised_miles_cumulative": {
         "value": "nearly 2,000,000",
