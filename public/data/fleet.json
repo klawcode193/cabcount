@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-10",
-  "last_checked": "2026-11-10T14:52:27.804Z",
-  "last_checked_pt": "Nov 10, 2026, 6:52 AM PT",
-  "numbers_last_changed": "2026-11-10",
+  "updated": "2026-11-11",
+  "last_checked": "2026-11-11T14:55:24.853Z",
+  "last_checked_pt": "Nov 11, 2026, 6:55 AM PT",
+  "numbers_last_changed": "2026-11-11",
   "basis": "Texas DMV registrations (not confirmed active vehicles)",
   "sources": [
     "https://www.thechargeport.com/robotaxi-tracker",
@@ -116,6 +116,13 @@
       "model_y": 709,
       "cybercab": 573,
       "note": "Texas DMV registry via fsddb.com (https://fsddb.com/robotaxi?operator=tesla-robotaxi-llc&service=all: 1,282 registered VINs; daily series shows 1,244 on 2026-11-07, 1,282 on 2026-11-08, 11-09 and 11-10; +38 new VINs, all Model Y-prefix (7SAYGDEE), Cybercab unchanged at 573; split by VIN prefix, matching prior counts)."
+    },
+    {
+      "date": "2026-11-11",
+      "total": 1302,
+      "model_y": 729,
+      "cybercab": 573,
+      "note": "Texas DMV registry via EVwire (https://evwire.com/p/tesla-overtakes-waymo-texas-robotaxi-registrations, Nov 11): 1,302 vehicles under Tesla Robotaxi, LLC; batch of 20 Model Ys took it from 1,282 on Nov 10; Cybercab unchanged at 573. Tesla passed Waymo (1,297)."
     }
   ]
 }
