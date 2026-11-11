@@ -72,16 +72,10 @@ const head = ({ title, desc, url, img = "/assets/og.png", extraHead = "" }) => `
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(desc)}"><meta name="twitter:image" content="${SITE}${img}">
 ${extraHead}<link rel="stylesheet" href="/css/style.css"></head><body>
 <header class="nav"><a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26"> CabCount</a>
-<nav><a href="/#map">Map</a><a href="/sightings.html">Sightings</a><a href="/about.html">About</a><a class="btn sm" href="#newsletter">Get alerts</a></nav></header>`;
-const newsletter = (city = '') => `<section class="card newsletter" id="newsletter"><h2>${city ? `Get alerted for ${esc(city)}` : 'Get the weekly CabCount'}</h2>
-<p>New cities, geofence expansions and Cybercab counts. One email a week, no spam.</p>
-<form class="signup kit-form" action="https://app.kit.com/forms/10069322/subscriptions" method="post" data-kit-form="10069322">
-<input type="email" name="email_address" placeholder="you@email.com" required aria-label="Email">
-<input type="text" name="fields[city]" placeholder="Your city" value="${esc(city)}" aria-label="City">
-<button class="btn" type="submit">Notify me</button><p class="msg small" role="status" aria-live="polite"></p></form><script>document.querySelectorAll('form.kit-form').forEach(function(f){f.addEventListener('submit',function(e){if(!window.fetch||!window.FormData)return;e.preventDefault();var m=f.querySelector('.msg'),b=f.querySelector('button');b.disabled=true;m.textContent='Sending…';fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}}).then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(!r.ok||j.status==='failed')throw j;if(j.status==='quarantined'&&j.url){window.location.href=j.url;return;}m.textContent='Check your inbox to confirm your subscription.';f.reset();var c=f.querySelector('[name="fields[city]"]');if(c)c.value=c.defaultValue;})}).catch(function(){m.textContent='Sorry, something went wrong. Please try again in a moment.';}).finally(function(){b.disabled=false;});});});</script></section>`;
-const sponsor = `<aside class="card sponsor"><span class="small muted">SPONSOR</span><h3>Sponsor CabCount</h3><p>Reach Robotaxi-curious readers every week. <a href="/about.html#sponsor">Learn more</a></p><!-- SPONSOR SLOT PLACEHOLDER --></aside>`;
+<nav><a href="/#map">Map</a><a href="/sightings.html">Sightings</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></nav></header>`;
+const sponsor = `<aside class="card sponsor"><span class="small muted">SPONSOR</span><h3>Sponsor CabCount</h3><p>Sponsorship slots on the homepage and city pages. <a href="/about.html#sponsor">Learn more</a></p></aside>`;
 const foot = (scripts = '') => `<footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
-<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>${scripts}</body></html>`;
+<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/privacy.html">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>${scripts}</body></html>`;
 const freshness = () => `<div class="freshness"><p class="checked">Last checked: <time datetime="${BUILT.toISOString()}">${checkedPT}</time></p><p class="small muted">Numbers last changed: <time datetime="${seed.meta.compiled}">${fmtDate(seed.meta.compiled)}</time></p></div>`;
 const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
 const srcList = s => `<ul class="sources">${s.map(u => `<li><a href="${esc(u)}" rel="noopener nofollow" target="_blank">${esc(host(u))}</a> <span class="muted small">${esc(u.length > 70 ? u.slice(0, 70) + '…' : u)}</span></li>`).join('')}</ul>`;
@@ -102,12 +96,11 @@ ${freshness()}</section>
 <div class="card"><h2>Texas fleet registrations</h2><div class="chartbox"><canvas id="fleetChart" aria-label="Fleet over time"></canvas></div><p class="small muted">† Texas DMV registrations, not cars confirmed in service. As of ${fmtDate(summary.cybercabs_as_of)}.</p></div>
 <div class="card"><h2>Service-area growth</h2><div class="chartbox"><canvas id="areaChart" aria-label="Service area over time"></canvas></div><p class="small muted">* Estimated from in-app maps; trackers differ by a few %.</p></div>
 </section>
-${newsletter()}
 ${sponsor}
 </main>` + foot('<script src="/vendor/leaflet.js" defer></script><script src="/vendor/chart.umd.min.js" defer></script><script src="/js/home.js" defer></script>'));
 
 // ---------- city pages ----------
-const pages = ['/', '/sightings.html', '/about.html'];
+const pages = ['/', '/sightings.html', '/about.html', '/privacy.html'];
 for (const c of cities.filter(c => c.has_page)) {
   const st = STATUS[c.status];
   const tl = [];
@@ -131,28 +124,23 @@ ${c.cybercab_note ? `<div class="card note"><strong>Cybercab watch:</strong> ${e
 ${c.hours ? `<p class="muted">Hours: ${esc(c.hours)}</p>` : ''}
 <section class="grid2"><div class="card"><h2>Timeline</h2>${tl.length ? `<ol class="timeline">${tl.map(([d, t]) => `<li><time>${fmtDate(d)}</time><span>${esc(t)}</span></li>`).join('')}</ol>` : '<p class="muted">No dated milestones yet.</p>'}</div>
 <div class="card"><h2>Service area</h2>${c.service_area_history.length ? `<div class="chartbox"><canvas id="cityArea"></canvas></div><p class="small muted">Estimates traced from the Robotaxi app map.</p>` : '<p class="muted">No public service area yet.</p>'}</div></section>
-${newsletter(c.name)}
-<section class="card"><h2>Sources</h2>${srcList(c.sources)}<p class="small muted">See something new? <a href="/sightings.html">Report a sighting</a>.</p></section>
+<section class="card"><h2>Sources</h2>${srcList(c.sources)}</section>
 ${sponsor}</main>
-<script>window.CITY=${JSON.stringify({ name: c.name, history: c.service_area_history }).replace(/</g, '\\u003c')};</script>` + foot('<script src="/vendor/chart.umd.min.js" defer></script><script src="/js/city.js" defer></script>');
+<script type="application/json" id="city-data">${JSON.stringify({ name: c.name, history: c.service_area_history }).replace(/</g, '\\u003c')}</script>` + foot('<script src="/vendor/chart.umd.min.js" defer></script><script src="/js/city.js" defer></script>');
   fs.writeFileSync(path.join(out, 'city', c.slug + '.html'), html);
   pages.push(`/city/${c.slug}.html`);
 }
 
 // ---------- sightings ----------
-fs.writeFileSync(path.join(out, 'sightings.html'), head({ title: 'Report a Robotaxi or Cybercab sighting | CabCount', desc: 'Spotted a Tesla Robotaxi or Cybercab testing in your city? Send it to CabCount. Submissions are reviewed before they go on the map.', url: '/sightings.html' }) + `
-<main><section class="hero left"><h1>Spotted a Robotaxi or Cybercab?</h1>
-<p class="lede">Send us a photo, video or link. Every submission is <strong>reviewed by a human before it goes on the map</strong> — we check location, date and that it's really a Tesla test vehicle.</p></section>
-<section class="card"><h2>Submit a sighting</h2>
-<!-- ===== TALLY EMBED PLACEHOLDER =====
-  Replace the div below with your Tally embed, e.g.
-  <iframe data-tally-src="https://tally.so/embed/YOUR_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1" loading="lazy" width="100%" height="600" frameborder="0" title="CabCount sighting"></iframe>
-  <script async src="https://tally.so/widgets/embed.js"></script>
-  Suggested fields: city, date/time, location (cross streets), vehicle type (Model Y / Cybercab), driver seat occupied?, photo/video upload or link, email (optional).
-===================================== -->
-<div id="tally-embed"><iframe data-tally-src="https://tally.so/embed/7XlGB6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" title="Report a Robotaxi sighting"></iframe><script async src="https://tally.so/widgets/embed.js"></script><p class="small">Form not loading? <a href="https://tally.so/r/7XlGB6">Open it here</a>.</p></div>
-<h3>What happens next</h3><ol><li>We verify the date, place and vehicle.</li><li>Confirmed sightings appear on the map as <em>Testing / Sightings</em>.</li><li>We never publish your email; photo credit is optional.</li></ol></section>
-${newsletter()}</main>` + foot());
+fs.writeFileSync(path.join(out, 'sightings.html'), head({ title: 'Sightings | CabCount', desc: 'How CabCount shows testing and sighting statuses from published sources. The site does not collect sighting reports or visitor details.', url: '/sightings.html' }) + `
+<main><section class="hero left"><h1>Sightings</h1>
+<p class="lede">Cities marked Testing / Sightings on the map use published reports already compiled into CabCount. This page does not accept photos, locations, or other submissions.</p></section>
+<section class="card"><h2>Where a sighting status comes from</h2>
+<p>Testing / Sightings is a public-source status, like the other city statuses. It is not a visitor inbox. Open the map to see those cities, then open a city page for the sources behind its status.</p>
+<p><a href="/#map">Open the map</a> · <a href="/about.html">How statuses are sourced</a></p></section>
+<section class="card"><h2>No submissions</h2>
+<p>CabCount does not collect sighting reports or other details from visitors. There is no form on this page.</p></section>
+</main>` + foot());
 
 // ---------- about ----------
 fs.writeFileSync(path.join(out, 'about.html'), head({ title: 'About CabCount & sources', desc: 'How CabCount tracks Tesla Robotaxi and Cybercab: methodology, sources and disclaimers. Not affiliated with Tesla.', url: '/about.html' }) + `
@@ -165,8 +153,25 @@ fs.writeFileSync(path.join(out, 'about.html'), head({ title: 'About CabCount & s
 <li>Requested cities are reader demand only — they're placed approximately and imply no Tesla activity.</li></ul></section>
 <section class="card"><h2>Other metrics</h2><ul><li>Cumulative unsupervised miles: ${esc(seed.other_metrics.unsupervised_miles_cumulative.value)} (as of ${fmtDate(seed.other_metrics.unsupervised_miles_cumulative.date)})</li><li>NHTSA Cybercab review: ${esc(seed.other_metrics.nhtsa_cybercab_review.status)}</li></ul></section>
 <section class="card"><h2>Sources</h2><h3>Fleet</h3>${srcList(seed.fleet_sources)}<h3>Cities</h3>${srcList([...new Set(seed.cities.flatMap(c => c.sources))])}<h3>Other trackers worth reading</h3>${srcList(seed.existing_trackers_competitors)}</section>
-<section class="card" id="sponsor"><h2>Sponsor CabCount</h2><p>Sponsorship slots on the homepage, city pages and weekly email. <!-- SPONSOR CONTACT PLACEHOLDER: add contact email/form before launch --> Contact details coming soon.</p></section>
+<section class="card" id="privacy"><h2>Privacy</h2><p>CabCount does not take email signups or sighting submissions. Hosting logs, OpenStreetMap map tiles, and a Cloudflare analytics tag the host may insert are described on the <a href="/privacy.html">privacy page</a>.</p></section>
+<section class="card" id="sponsor"><h2>Sponsor CabCount</h2><p>Sponsorship slots on the homepage and city pages. CabCount does not take sponsor applications on this website.</p></section>
 <p><a href="https://beam42.space">beam42.space</a> · <a href="https://www.youtube.com/@beam42space">Beam42 on YouTube</a></p></main>` + foot());
+
+// ---------- privacy ----------
+fs.writeFileSync(path.join(out, 'privacy.html'), head({ title: 'Privacy | CabCount', desc: 'What CabCount does and does not ask from visitors, and which hosting, map, and analytics requests can still occur.', url: '/privacy.html' }) + `
+<main><section class="hero left"><h1>Privacy</h1>
+<p class="lede">CabCount publishes a tracker of Robotaxi information that is already public. It does not ask visitors for an email address, an account, a sighting report, or other personal details.</p></section>
+<section class="card"><h2>What you can do here</h2>
+<p>You can read the pages, move the map, and open a city. The city list and charts are drawn from files on this site. There is no search box, account, or form, so the pages have no field that submits what you type.</p></section>
+<section class="card"><h2>What a visit can still create</h2>
+<ul>
+<li><strong>Host logs.</strong> The site is hosted on Cloudflare. A request can be recorded in Cloudflare access and security logs, including IP address, user agent, the URL, and the time. This repository cannot turn those logs off.</li>
+<li><strong>Network-error reporting.</strong> Cloudflare may add network-error reporting headers on responses. This site does not set those headers, and it cannot remove headers the host adds.</li>
+<li><strong>Web Analytics tag.</strong> Cloudflare Pages can insert a Cloudflare Web Analytics script on the live site. That script is not part of this repository. Responses include a Content Security Policy that allows scripts and network calls only back to this site, plus map images from OpenStreetMap. A browser that enforces that policy should refuse the analytics script. Turning the tag off entirely is a Cloudflare project setting, not a change in this repository.</li>
+<li><strong>Map images.</strong> The homepage map loads tiles from OpenStreetMap (<span class="muted">tile.openstreetmap.org</span>). Your IP address, the map area you view, and this site's address as the referrer are sent to OpenStreetMap so those images can be drawn. Links to sources, Beam42, YouTube, and OpenStreetMap load those sites only if you follow them. Page scripts and styles are files on this site.</li>
+</ul>
+<p>This page does not say that a visit creates no data. CabCount does not ask you to submit information. Hosting logs, map tiles, and a host-inserted analytics tag can still involve another party.</p>
+</section></main>` + foot());
 
 // ---------- sitemap / robots ----------
 fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p => `  <url><loc>${SITE}${p}</loc><lastmod>${seed.meta.compiled}</lastmod></url>`).join('\n')}\n</urlset>\n`);

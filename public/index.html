@@ -7,11 +7,11 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CabCount — Is Tesla Robotaxi coming to your city?"><meta name="twitter:description" content="Live tracker of Tesla Robotaxi and Cybercab rollout: 9 cities live, 2,372 sq mi of service, 573 Cybercabs registered."><meta name="twitter:image" content="https://cabcount.app/assets/og.png">
 <link rel="stylesheet" href="/vendor/leaflet.css"><link rel="stylesheet" href="/css/style.css"></head><body>
 <header class="nav"><a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26"> CabCount</a>
-<nav><a href="/#map">Map</a><a href="/sightings.html">Sightings</a><a href="/about.html">About</a><a class="btn sm" href="#newsletter">Get alerts</a></nav></header>
+<nav><a href="/#map">Map</a><a href="/sightings.html">Sightings</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></nav></header>
 <main>
 <section class="hero"><h1>Is Robotaxi coming to <span class="accent">your city?</span></h1>
 <p class="lede">Every Tesla Robotaxi city, geofence and Cybercab — tracked, sourced, and mapped.</p>
-<div class="freshness"><p class="checked">Last checked: <time datetime="2026-11-11T14:55:24.853Z">Nov 11, 2026, 6:55 AM PT</time></p><p class="small muted">Numbers last changed: <time datetime="2026-11-11">Nov 11, 2026</time></p></div></section>
+<div class="freshness"><p class="checked">Last checked: <time datetime="2026-11-11T18:53:44.055Z">Nov 11, 2026, 10:53 AM PT</time></p><p class="small muted">Numbers last changed: <time datetime="2026-11-11">Nov 11, 2026</time></p></div></section>
 <section class="scoreboard">
 <div class="stat"><b id="s-live">9</b><span>cities live</span></div>
 <div class="stat"><b id="s-area">2,372</b><span>sq mi of service*</span></div>
@@ -22,12 +22,6 @@
 <div class="card"><h2>Texas fleet registrations</h2><div class="chartbox"><canvas id="fleetChart" aria-label="Fleet over time"></canvas></div><p class="small muted">† Texas DMV registrations, not cars confirmed in service. As of Nov 11, 2026.</p></div>
 <div class="card"><h2>Service-area growth</h2><div class="chartbox"><canvas id="areaChart" aria-label="Service area over time"></canvas></div><p class="small muted">* Estimated from in-app maps; trackers differ by a few %.</p></div>
 </section>
-<section class="card newsletter" id="newsletter"><h2>Get the weekly CabCount</h2>
-<p>New cities, geofence expansions and Cybercab counts. One email a week, no spam.</p>
-<form class="signup kit-form" action="https://app.kit.com/forms/10069322/subscriptions" method="post" data-kit-form="10069322">
-<input type="email" name="email_address" placeholder="you@email.com" required aria-label="Email">
-<input type="text" name="fields[city]" placeholder="Your city" value="" aria-label="City">
-<button class="btn" type="submit">Notify me</button><p class="msg small" role="status" aria-live="polite"></p></form><script>document.querySelectorAll('form.kit-form').forEach(function(f){f.addEventListener('submit',function(e){if(!window.fetch||!window.FormData)return;e.preventDefault();var m=f.querySelector('.msg'),b=f.querySelector('button');b.disabled=true;m.textContent='Sending…';fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}}).then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(!r.ok||j.status==='failed')throw j;if(j.status==='quarantined'&&j.url){window.location.href=j.url;return;}m.textContent='Check your inbox to confirm your subscription.';f.reset();var c=f.querySelector('[name="fields[city]"]');if(c)c.value=c.defaultValue;})}).catch(function(){m.textContent='Sorry, something went wrong. Please try again in a moment.';}).finally(function(){b.disabled=false;});});});</script></section>
-<aside class="card sponsor"><span class="small muted">SPONSOR</span><h3>Sponsor CabCount</h3><p>Reach Robotaxi-curious readers every week. <a href="/about.html#sponsor">Learn more</a></p><!-- SPONSOR SLOT PLACEHOLDER --></aside>
+<aside class="card sponsor"><span class="small muted">SPONSOR</span><h3>Sponsor CabCount</h3><p>Sponsorship slots on the homepage and city pages. <a href="/about.html#sponsor">Learn more</a></p></aside>
 </main><footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
-<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/sitemap.xml">Sitemap</a></p></footer><script src="/vendor/leaflet.js" defer></script><script src="/vendor/chart.umd.min.js" defer></script><script src="/js/home.js" defer></script></body></html>
+<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/privacy.html">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></p></footer><script src="/vendor/leaflet.js" defer></script><script src="/vendor/chart.umd.min.js" defer></script><script src="/js/home.js" defer></script></body></html>
