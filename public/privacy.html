@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy | CabCount</title><meta name="description" content="What CabCount does and does not ask from visitors, and which hosting, map, and analytics requests can still occur.">
+<link rel="canonical" href="https://cabcount.app/privacy.html"><meta name="theme-color" content="#0b0f17">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="CabCount"><meta property="og:title" content="Privacy | CabCount"><meta property="og:description" content="What CabCount does and does not ask from visitors, and which hosting, map, and analytics requests can still occur."><meta property="og:url" content="https://cabcount.app/privacy.html"><meta property="og:image" content="https://cabcount.app/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Privacy | CabCount"><meta name="twitter:description" content="What CabCount does and does not ask from visitors, and which hosting, map, and analytics requests can still occur."><meta name="twitter:image" content="https://cabcount.app/assets/og.png">
+<link rel="stylesheet" href="/css/style.css"></head><body>
+<header class="nav"><a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26"> CabCount</a>
+<nav><a href="/#map">Map</a><a href="/sightings.html">Sightings</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></nav></header>
+<main><section class="hero left"><h1>Privacy</h1>
+<p class="lede">CabCount publishes a tracker of Robotaxi information that is already public. It does not ask visitors for an email address, an account, a sighting report, or other personal details.</p></section>
+<section class="card"><h2>What you can do here</h2>
+<p>You can read the pages, move the map, and open a city. The city list and charts are drawn from files on this site. There is no search box, account, or form, so the pages have no field that submits what you type.</p></section>
+<section class="card"><h2>What a visit can still create</h2>
+<ul>
+<li><strong>Host logs.</strong> The site is hosted on Cloudflare. A request can be recorded in Cloudflare access and security logs, including IP address, user agent, the URL, and the time. This repository cannot turn those logs off.</li>
+<li><strong>Network-error reporting.</strong> Cloudflare may add network-error reporting headers on responses. This site does not set those headers, and it cannot remove headers the host adds.</li>
+<li><strong>Web Analytics tag.</strong> Cloudflare Pages can insert a Cloudflare Web Analytics script on the live site. That script is not part of this repository. Responses include a Content Security Policy that allows scripts and network calls only back to this site, plus map images from OpenStreetMap. A browser that enforces that policy should refuse the analytics script. Turning the tag off entirely is a Cloudflare project setting, not a change in this repository.</li>
+<li><strong>Map images.</strong> The homepage map loads tiles from OpenStreetMap (<span class="muted">tile.openstreetmap.org</span>). Your IP address, the map area you view, and this site's address as the referrer are sent to OpenStreetMap so those images can be drawn. Links to sources, Beam42, YouTube, and OpenStreetMap load those sites only if you follow them. Page scripts and styles are files on this site.</li>
+</ul>
+<p>This page does not say that a visit creates no data. CabCount does not ask you to submit information. Hosting logs, map tiles, and a host-inserted analytics tag can still involve another party.</p>
+</section></main><footer class="foot"><p>CabCount is an independent tracker. <strong>Not affiliated with Tesla, Inc.</strong> Fleet numbers are registrations; service areas are estimates.</p>
+<p>Made by <a href="https://beam42.space" rel="noopener">Beam42</a> · <a href="https://www.youtube.com/@beam42space" rel="noopener">Beam42 on YouTube</a> · <a href="/about.html">About &amp; sources</a> · <a href="/privacy.html">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></p></footer></body></html>

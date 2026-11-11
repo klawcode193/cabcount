@@ -19,11 +19,10 @@ Static Tesla Robotaxi / Cybercab rollout tracker. Plain HTML/CSS/JS, Leaflet + O
 3. Preview: `python3 -m http.server 8080 -d public` → http://localhost:8080
 4. Commit and push. Cloudflare Pages rebuilds on its own.
 
-## Placeholders to fill before launch
-- **Kit (ConvertKit)**: in `newsletter()` in `scripts/build.mjs`, set the form action to `https://app.kit.com/forms/<FORM_ID>/subscriptions` (fields `email_address`, `fields[city]`; create a `city` custom field in Kit), or paste Kit's embed in its place.
-- **Tally**: in the sightings section of `build.mjs`, replace `#tally-embed` with the Tally iframe (see the HTML comment).
-- **Sponsor**: the `sponsor` block, plus the contact line on the About page.
-- Check the YouTube URL (`https://www.youtube.com/@beam42space`) in `foot()`.
+## Visitor information
+The public site does not include email signup, alerts, accounts, contact forms, or sighting submissions. Do not add those back. Drafts in `newsletter/` are unpublished files in the repo; they are not served and they are not a send path. This repo does not cancel mailing-list accounts or delete subscriber data.
+
+Cloudflare may still keep access and security logs, add network-error reporting headers, and insert a Web Analytics script on the live site. `public/_headers` sets a Content Security Policy that allows scripts and connections only from this site, and map images only from this site or OpenStreetMap. That policy does not turn off Cloudflare's own logs. The homepage map loads tiles from `tile.openstreetmap.org`.
 
 ## Cloudflare Pages
 Connect the GitHub repo in Cloudflare Pages:
