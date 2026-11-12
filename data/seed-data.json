@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "CabCount seed data",
-    "compiled": "2026-11-11",
+    "compiled": "2026-11-12",
     "compiled_tz": "America/Los_Angeles",
     "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
     "status_values": {
@@ -68,7 +68,7 @@
           "note": "Tesla's @robotaxi said a bigger Austin area is live (no figure); Robotaxi Tracker measures ~442-443 sq mi per Electrek, TeslaNorth and Drive Tesla Canada; robotracker.app shows 435. Tracker estimate, Tesla publishes no figure"
         }
       ],
-      "hours": "6am to 2am (official @robotaxi post Oct 30, 2026; Tesla didn't say which cities the new hours cover, and availability can vary by area)",
+      "hours": "24/7 (official @robotaxi post Nov 11, 2026: \"Robotaxi now runs 24/7. Every city we're available in.\"; via TeslaNorth. Availability still depends on vehicles in the area)",
       "sources": [
         "https://www.tesla.com/robotaxi",
         "https://robotracker.app/updates?city_id=1&operator_id=1",
@@ -521,6 +521,13 @@
       "model_y": 729,
       "cybercab": 573,
       "note": "Texas DMV registry via EVwire (https://evwire.com/p/tesla-overtakes-waymo-texas-robotaxi-registrations, Nov 11): 1,302 vehicles under Tesla Robotaxi, LLC; batch of 20 Model Ys took it from 1,282 on Nov 10; Cybercab unchanged at 573. Tesla passed Waymo (1,297)."
+    },
+    {
+      "date": "2026-11-12",
+      "total": 1303,
+      "model_y": 730,
+      "cybercab": 573,
+      "note": "Texas DMV registry via EVwire Robotaxi Tracker (https://tracker.evwire.com/charts/tesla-mix, check Nov 12, 2026 8:06 a.m. CT): 573 Cybercab + 730 Model Y = 1,303; +1 Model Y vs 1,302 on Nov 11; models decoded from VINs."
     }
   ],
   "fleet_sources": [

@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-11",
-  "last_checked": "2026-11-11T18:53:44.055Z",
-  "last_checked_pt": "Nov 11, 2026, 10:53 AM PT",
-  "numbers_last_changed": "2026-11-11",
+  "updated": "2026-11-12",
+  "last_checked": "2026-11-12T14:53:21.963Z",
+  "last_checked_pt": "Nov 12, 2026, 6:53 AM PT",
+  "numbers_last_changed": "2026-11-12",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,12 +26,12 @@
     }
   },
   "summary": {
-    "updated": "2026-11-11",
+    "updated": "2026-11-12",
     "cities_live": 9,
     "service_sq_mi": 2372,
     "cybercabs_registered": 573,
-    "cybercabs_as_of": "2026-11-11",
-    "fleet_total": 1302,
+    "cybercabs_as_of": "2026-11-12",
+    "fleet_total": 1303,
     "other_metrics": {
       "unsupervised_miles_cumulative": {
         "value": "nearly 2,000,000",
@@ -103,7 +103,7 @@
           "note": "Tesla's @robotaxi said a bigger Austin area is live (no figure); Robotaxi Tracker measures ~442-443 sq mi per Electrek, TeslaNorth and Drive Tesla Canada; robotracker.app shows 435. Tracker estimate, Tesla publishes no figure"
         }
       ],
-      "hours": "6am to 2am (official @robotaxi post Oct 30, 2026; Tesla didn't say which cities the new hours cover, and availability can vary by area)",
+      "hours": "24/7 (official @robotaxi post Nov 11, 2026: \"Robotaxi now runs 24/7. Every city we're available in.\"; via TeslaNorth. Availability still depends on vehicles in the area)",
       "permit_date": null,
       "permitted_vehicles": null,
       "notes": "Oct 22, 2026: service area now reaches Circuit of the Americas, and last call moved to 1am. Nov 9, 2026: Tesla said the expanded Austin service area is now live; trackers put it at about 443 sq mi, Tesla's largest.",
