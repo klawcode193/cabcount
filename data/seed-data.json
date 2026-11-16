@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "CabCount seed data",
-    "compiled": "2026-11-15",
+    "compiled": "2026-11-16",
     "compiled_tz": "America/Los_Angeles",
     "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
     "status_values": {
@@ -222,14 +222,15 @@
         "Model Y"
       ],
       "cybercab": false,
-      "service_area_sq_mi": 31,
-      "service_area_as_of": "2026-08",
-      "notes": "Unsupervised rides from day one. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App).",
+      "service_area_sq_mi": 59,
+      "service_area_as_of": "2026-11-16",
+      "notes": "Unsupervised rides from day one. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App). Nov 16, 2026: Tesla's Robotaxi account announced 'Now serving more of Miami'; Robotaxi Tracker measures +28 sq mi to 59 sq mi (+92.4%), a tracker calculation, not a Tesla figure (via TeslaNorth).",
       "sources": [
         "https://www.tesla.com/robotaxi",
         "https://www.thechargeport.com/robotaxi-tracker",
         "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin",
-        "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals"
+        "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals",
+        "https://teslanorth.com/2026/11/16/tesla-miami-robotaxi-service-area-nearly-doubles/"
       ]
     },
     {

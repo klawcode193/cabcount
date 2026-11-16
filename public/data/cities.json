@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-15",
-  "last_checked": "2026-11-15T15:22:05.103Z",
-  "last_checked_pt": "Nov 15, 2026, 7:22 AM PT",
-  "numbers_last_changed": "2026-11-15",
+  "updated": "2026-11-16",
+  "last_checked": "2026-11-16T15:24:13.904Z",
+  "last_checked_pt": "Nov 16, 2026, 7:24 AM PT",
+  "numbers_last_changed": "2026-11-16",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,9 +26,9 @@
     }
   },
   "summary": {
-    "updated": "2026-11-15",
+    "updated": "2026-11-16",
     "cities_live": 9,
-    "service_sq_mi": 2372,
+    "service_sq_mi": 2400,
     "cybercabs_registered": 573,
     "cybercabs_as_of": "2026-11-14",
     "fleet_total": 1306,
@@ -304,23 +304,24 @@
       "cybercab": false,
       "cybercab_public_since": null,
       "cybercab_note": null,
-      "service_area_sq_mi": 31,
-      "service_area_as_of": "2026-08",
+      "service_area_sq_mi": 59,
+      "service_area_as_of": "2026-11-16",
       "service_area_history": [
         {
-          "date": "2026-08",
-          "sq_mi": 31
+          "date": "2026-11-16",
+          "sq_mi": 59
         }
       ],
       "hours": null,
       "permit_date": null,
       "permitted_vehicles": null,
-      "notes": "Unsupervised rides from day one. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App).",
+      "notes": "Unsupervised rides from day one. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App). Nov 16, 2026: Tesla's Robotaxi account announced 'Now serving more of Miami'; Robotaxi Tracker measures +28 sq mi to 59 sq mi (+92.4%), a tracker calculation, not a Tesla figure (via TeslaNorth).",
       "sources": [
         "https://www.tesla.com/robotaxi",
         "https://www.thechargeport.com/robotaxi-tracker",
         "https://www.notateslaapp.com/news/4632/tesla-expands-robotaxi-geofences-in-dallas-and-austin",
-        "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals"
+        "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals",
+        "https://teslanorth.com/2026/11/16/tesla-miami-robotaxi-service-area-nearly-doubles/"
       ],
       "has_page": true
     },
