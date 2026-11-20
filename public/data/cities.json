@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-19",
-  "last_checked": "2026-11-19T15:18:20.141Z",
-  "last_checked_pt": "Nov 19, 2026, 7:18 AM PT",
-  "numbers_last_changed": "2026-11-19",
+  "updated": "2026-11-20",
+  "last_checked": "2026-11-20T15:18:00.394Z",
+  "last_checked_pt": "Nov 20, 2026, 7:18 AM PT",
+  "numbers_last_changed": "2026-11-20",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,7 +26,7 @@
     }
   },
   "summary": {
-    "updated": "2026-11-19",
+    "updated": "2026-11-20",
     "cities_live": 9,
     "service_sq_mi": 2400,
     "cybercabs_registered": 773,
@@ -178,11 +178,12 @@
       "launched": "2026-04-18",
       "unsupervised_since": null,
       "vehicles": [
-        "Model Y"
+        "Model Y",
+        "Cybercab"
       ],
-      "cybercab": false,
-      "cybercab_public_since": null,
-      "cybercab_note": "Tesla said on its Q3 2026 earnings call (2026-10-21) that Cybercab will launch in Dallas in November 2026; still no date. Empty Cybercabs were spotted driving in Dallas 2026-10-03, and on 2026-11-14 an X user (@scotsrule08) filmed over 50 badged Cybercabs parked in Dallas (via eletric-vehicles.com). Tesla has not opened Cybercab rides here yet.",
+      "cybercab": true,
+      "cybercab_public_since": "2026-11-19",
+      "cybercab_note": "Tesla launched public, fully driverless Cybercab rides in Dallas on 2026-11-19 (@robotaxi: \"Howdy Dallas. Cybercab has arrived in your city\"), the second city after Austin. Dallas Cybercabs are the V1.5 design; they run in the existing ~81 sq mi area (Not a Tesla App, Audacy).",
       "service_area_sq_mi": 81,
       "service_area_as_of": "2026-08",
       "service_area_history": [
@@ -211,7 +212,9 @@
         "https://www.notateslaapp.com/news/4920/tesla-extends-robotaxi-hours-to-2-am-adds-new-calm-mode-that-hides-fsd-visuals",
         "https://eletric-vehicles.com/tesla/tesla-cybercabs-filmed-by-the-dozen-in-dallas-before-planned-launch/",
         "https://www.investing.com/news/stock-market-news/tesla-invites-select-customers-to-buy-cybercab-for-personal-use-5027212",
-        "https://www.caranddriver.com/news/a74441018/tesla-cybercab-orders-pricing/"
+        "https://www.caranddriver.com/news/a74441018/tesla-cybercab-orders-pricing/",
+        "https://www.notateslaapp.com/news/5044/tesla-launches-cybercab-rides-in-dallas-with-new-v15-design",
+        "https://www.audacy.com/krld/news/local/teslas-cybercab-begins-picking-up-passengers-in-dallas"
       ],
       "has_page": true
     },
