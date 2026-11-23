@@ -1,7 +1,7 @@
 {
   "updated": "2026-11-23",
-  "last_checked": "2026-11-23T15:16:44.153Z",
-  "last_checked_pt": "Nov 23, 2026, 7:16 AM PT",
+  "last_checked": "2026-11-23T16:51:23.733Z",
+  "last_checked_pt": "Nov 23, 2026, 8:51 AM PT",
   "numbers_last_changed": "2026-11-23",
   "statuses": {
     "live_unsupervised": {
@@ -48,6 +48,21 @@
         "sources": [
           "https://www.investing.com/news/stock-market-news/tesla-invites-select-customers-to-buy-cybercab-for-personal-use-5027212",
           "https://www.caranddriver.com/news/a74441018/tesla-cybercab-orders-pricing/"
+        ]
+      },
+      "first_responder_plan_update": {
+        "status": "Nov 20, 2026: Tesla updated its Robotaxi First Responder Interaction Plans (Cybercab v1.3, Model Y v1.6). New: Cybercab and Model Y Robotaxi are \"designed to operate on public roadways with posted speed limits up to 85 MPH\"; Cybercabs built from Nov 2026 have a Starlink unit and interior trunk camera; the line \"All Robotaxi vehicles are owned and operated by Tesla at this time\" was removed; the operating-area appendix now says \"Arizona or California\" (was Arizona only). No highway rides or California driverless rides announced yet.",
+        "date": "2026-11-20",
+        "sources": [
+          "https://www.notateslaapp.com/news/5061/teslas-updated-cybercab-manual-hints-at-owner-robotaxis-highway-access-more",
+          "https://x.com/scotsrule08/status/2123865605606625517"
+        ]
+      },
+      "rider_app_changes": {
+        "status": "Nov 16, 2026: riders can now link an X Money account to the Robotaxi app (Tesla @robotaxi on X).",
+        "date": "2026-11-16",
+        "sources": [
+          "https://x.com/robotaxi/status/2122419204762820948"
         ]
       }
     }
