@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "CabCount seed data",
-    "compiled": "2026-11-20",
+    "compiled": "2026-11-23",
     "compiled_tz": "America/Los_Angeles",
     "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
     "status_values": {
@@ -123,8 +123,8 @@
       ],
       "cybercab": true,
       "cybercab_note": "Tesla launched public, fully driverless Cybercab rides in Dallas on 2026-11-19 (@robotaxi: \"Howdy Dallas. Cybercab has arrived in your city\"), the second city after Austin. Dallas Cybercabs are the V1.5 design; they run in the existing ~81 sq mi area (Not a Tesla App, Audacy).",
-      "service_area_sq_mi": 81,
-      "service_area_as_of": "2026-08",
+      "service_area_sq_mi": 82,
+      "service_area_as_of": "2026-11-20",
       "service_area_history": [
         {
           "date": "2026-04-18",
@@ -133,6 +133,11 @@
         {
           "date": "2026-08",
           "sq_mi": 81
+        },
+        {
+          "date": "2026-11-20",
+          "sq_mi": 82,
+          "note": "Small northeast addition near N Central Expwy / The Hill Supercharger (Not a Tesla App, Nov 20)"
         }
       ],
       "notes": "City of Dallas memo dates launch April 19, 2026; Tesla says it intends to cover all of Dallas. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App). Nov 11, 2026: Tesla said Robotaxi now runs 24/7 in every city it serves (via TeslaNorth). Nov 13, 2026: Dallas is one of five Texas cities (with Austin, Fort Worth, Houston, San Antonio) where invited buyers can take delivery of a personal Cybercab (Reuters; delivery city list per Car and Driver).",
@@ -150,7 +155,8 @@
         "https://www.investing.com/news/stock-market-news/tesla-invites-select-customers-to-buy-cybercab-for-personal-use-5027212",
         "https://www.caranddriver.com/news/a74441018/tesla-cybercab-orders-pricing/",
         "https://www.notateslaapp.com/news/5044/tesla-launches-cybercab-rides-in-dallas-with-new-v15-design",
-        "https://www.audacy.com/krld/news/local/teslas-cybercab-begins-picking-up-passengers-in-dallas"
+        "https://www.audacy.com/krld/news/local/teslas-cybercab-begins-picking-up-passengers-in-dallas",
+        "https://www.notateslaapp.com/news/5055/tesla-expands-dallas-robotaxi-area-by-a-whole-square-mile"
       ],
       "cybercab_public_since": "2026-11-19"
     },

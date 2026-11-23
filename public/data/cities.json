@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-20",
-  "last_checked": "2026-11-22T15:19:41.348Z",
-  "last_checked_pt": "Nov 22, 2026, 7:19 AM PT",
-  "numbers_last_changed": "2026-11-20",
+  "updated": "2026-11-23",
+  "last_checked": "2026-11-23T15:16:44.153Z",
+  "last_checked_pt": "Nov 23, 2026, 7:16 AM PT",
+  "numbers_last_changed": "2026-11-23",
   "statuses": {
     "live_unsupervised": {
       "label": "Live – no monitor",
@@ -26,9 +26,9 @@
     }
   },
   "summary": {
-    "updated": "2026-11-20",
+    "updated": "2026-11-23",
     "cities_live": 9,
-    "service_sq_mi": 2400,
+    "service_sq_mi": 2401,
     "cybercabs_registered": 773,
     "cybercabs_as_of": "2026-11-17",
     "fleet_total": 1507,
@@ -184,8 +184,8 @@
       "cybercab": true,
       "cybercab_public_since": "2026-11-19",
       "cybercab_note": "Tesla launched public, fully driverless Cybercab rides in Dallas on 2026-11-19 (@robotaxi: \"Howdy Dallas. Cybercab has arrived in your city\"), the second city after Austin. Dallas Cybercabs are the V1.5 design; they run in the existing ~81 sq mi area (Not a Tesla App, Audacy).",
-      "service_area_sq_mi": 81,
-      "service_area_as_of": "2026-08",
+      "service_area_sq_mi": 82,
+      "service_area_as_of": "2026-11-20",
       "service_area_history": [
         {
           "date": "2026-04-18",
@@ -194,6 +194,11 @@
         {
           "date": "2026-08",
           "sq_mi": 81
+        },
+        {
+          "date": "2026-11-20",
+          "sq_mi": 82,
+          "note": "Small northeast addition near N Central Expwy / The Hill Supercharger (Not a Tesla App, Nov 20)"
         }
       ],
       "hours": null,
@@ -214,7 +219,8 @@
         "https://www.investing.com/news/stock-market-news/tesla-invites-select-customers-to-buy-cybercab-for-personal-use-5027212",
         "https://www.caranddriver.com/news/a74441018/tesla-cybercab-orders-pricing/",
         "https://www.notateslaapp.com/news/5044/tesla-launches-cybercab-rides-in-dallas-with-new-v15-design",
-        "https://www.audacy.com/krld/news/local/teslas-cybercab-begins-picking-up-passengers-in-dallas"
+        "https://www.audacy.com/krld/news/local/teslas-cybercab-begins-picking-up-passengers-in-dallas",
+        "https://www.notateslaapp.com/news/5055/tesla-expands-dallas-robotaxi-area-by-a-whole-square-mile"
       ],
       "has_page": true
     },
