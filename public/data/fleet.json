@@ -1,7 +1,7 @@
 {
   "updated": "2026-11-23",
-  "last_checked": "2026-11-24T15:18:14.172Z",
-  "last_checked_pt": "Nov 24, 2026, 7:18 AM PT",
+  "last_checked": "2026-11-25T15:18:08.970Z",
+  "last_checked_pt": "Nov 25, 2026, 7:18 AM PT",
   "numbers_last_changed": "2026-11-23",
   "basis": "Texas DMV registrations (not confirmed active vehicles)",
   "sources": [
@@ -144,6 +144,13 @@
       "model_y": 734,
       "cybercab": 773,
       "note": "Texas DMV registry via CyberCab.News (https://www.cybercab.news/article/tesla-cybercab-record-200-registrations-773-nov18, Nov 18), citing Sawyer Merritt on X and Robotaxi Radar: record +200 Cybercabs in one update (573 to 773), 734 Model Y, 1,507 total."
+    },
+    {
+      "date": "2026-11-24",
+      "total": 1556,
+      "model_y": 734,
+      "cybercab": 822,
+      "note": "Texas DMV registry via TeslaNorth (https://teslanorth.com/2026/11/25/tesla-texas-robotaxi-roster-822-cybercabs/, Nov 25), DMV records checked Nov 24 with VINs decoded: 822 Cybercab + 734 Model Y = 1,556; +49 Cybercabs vs Nov 17 (773)."
     }
   ]
 }
