@@ -1,7 +1,7 @@
 {
   "updated": "2026-11-23",
-  "last_checked": "2026-11-25T15:18:08.970Z",
-  "last_checked_pt": "Nov 25, 2026, 7:18 AM PT",
+  "last_checked": "2026-11-26T15:18:01.369Z",
+  "last_checked_pt": "Nov 26, 2026, 7:18 AM PT",
   "numbers_last_changed": "2026-11-23",
   "statuses": {
     "live_unsupervised": {
@@ -219,7 +219,7 @@
       "hours": null,
       "permit_date": null,
       "permitted_vehicles": null,
-      "notes": "City of Dallas memo dates launch April 19, 2026; Tesla says it intends to cover all of Dallas. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App). Nov 11, 2026: Tesla said Robotaxi now runs 24/7 in every city it serves (via TeslaNorth). Nov 13, 2026: Dallas is one of five Texas cities (with Austin, Fort Worth, Houston, San Antonio) where invited buyers can take delivery of a personal Cybercab (Reuters; delivery city list per Car and Driver).",
+      "notes": "City of Dallas memo dates launch April 19, 2026; Tesla says it intends to cover all of Dallas. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App). Nov 11, 2026: Tesla said Robotaxi now runs 24/7 in every city it serves (via TeslaNorth). Nov 13, 2026: Dallas is one of five Texas cities (with Austin, Fort Worth, Houston, San Antonio) where invited buyers can take delivery of a personal Cybercab (Reuters; delivery city list per Car and Driver). Nov 25, 2026: Tesla's @robotaxi account said the Dallas service area grew wider (new boundary stretches north past University Park toward Farmers Branch, Addison and Richardson), with more cars and lower fares; no new square mileage or fare given (via TeslaNorth).",
       "sources": [
         "https://www.reuters.com/business/autos-transportation/tesla-rolls-out-robotaxis-dallas-houston-2026-04-18/",
         "https://dallascityhall.com/government/citymanager/Documents/FY25-26%20Memos/Launch%20of%20Tesla%20Robotaxi%20Services.pdf",
@@ -235,7 +235,8 @@
         "https://www.caranddriver.com/news/a74441018/tesla-cybercab-orders-pricing/",
         "https://www.notateslaapp.com/news/5044/tesla-launches-cybercab-rides-in-dallas-with-new-v15-design",
         "https://www.audacy.com/krld/news/local/teslas-cybercab-begins-picking-up-passengers-in-dallas",
-        "https://www.notateslaapp.com/news/5055/tesla-expands-dallas-robotaxi-area-by-a-whole-square-mile"
+        "https://www.notateslaapp.com/news/5055/tesla-expands-dallas-robotaxi-area-by-a-whole-square-mile",
+        "https://teslanorth.com/2026/11/25/tesla-robotaxi-dallas-expansion-lower-fares/"
       ],
       "has_page": true
     },
