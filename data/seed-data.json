@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "CabCount seed data",
-    "compiled": "2026-11-23",
+    "compiled": "2026-11-27",
     "compiled_tz": "America/Los_Angeles",
     "notes": "Tesla Robotaxi / Cybercab rollout by city. Tesla does not publish fleet counts or service-area sizes; areas are tracker estimates traced from the in-app map (they vary a few % between trackers), fleet numbers are Texas DMV registrations (not cars confirmed running). Re-verify before publishing.",
     "status_values": {
@@ -123,8 +123,8 @@
       ],
       "cybercab": true,
       "cybercab_note": "Tesla launched public, fully driverless Cybercab rides in Dallas on 2026-11-19 (@robotaxi: \"Howdy Dallas. Cybercab has arrived in your city\"), the second city after Austin. Dallas Cybercabs are the V1.5 design; they run in the existing ~81 sq mi area (Not a Tesla App, Audacy).",
-      "service_area_sq_mi": 82,
-      "service_area_as_of": "2026-11-20",
+      "service_area_sq_mi": 150,
+      "service_area_as_of": "2026-11-25",
       "service_area_history": [
         {
           "date": "2026-04-18",
@@ -138,9 +138,14 @@
           "date": "2026-11-20",
           "sq_mi": 82,
           "note": "Small northeast addition near N Central Expwy / The Hill Supercharger (Not a Tesla App, Nov 20)"
+        },
+        {
+          "date": "2026-11-25",
+          "sq_mi": 150,
+          "note": "Tesla said Dallas grew wider (Nov 25); Robotaxi Tracker measured ~150 sq mi, crossing LBJ Freeway into south Richardson, Carrollton, Farmers Branch, Addison (Richardson-Garland Herald, Nov 27)"
         }
       ],
-      "notes": "City of Dallas memo dates launch April 19, 2026; Tesla says it intends to cover all of Dallas. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App). Nov 11, 2026: Tesla said Robotaxi now runs 24/7 in every city it serves (via TeslaNorth). Nov 13, 2026: Dallas is one of five Texas cities (with Austin, Fort Worth, Houston, San Antonio) where invited buyers can take delivery of a personal Cybercab (Reuters; delivery city list per Car and Driver). Nov 25, 2026: Tesla's @robotaxi account said the Dallas service area grew wider (new boundary stretches north past University Park toward Farmers Branch, Addison and Richardson), with more cars and lower fares; no new square mileage or fare given (via TeslaNorth).",
+      "notes": "City of Dallas memo dates launch April 19, 2026; Tesla says it intends to cover all of Dallas. Oct 28, 2026: the Robotaxi app is showing new riders a free first ride (\"First ride on us\", $0.00) in Dallas and Houston but not Austin, per an app screenshot shared on X Oct 28 (via TeslaNorth). Tesla hasn't announced it officially. Oct 30, 2026: Tesla's @robotaxi account said operating hours are now 6am to 2am, without naming cities, so check the app for this area (via Not a Tesla App). Nov 11, 2026: Tesla said Robotaxi now runs 24/7 in every city it serves (via TeslaNorth). Nov 13, 2026: Dallas is one of five Texas cities (with Austin, Fort Worth, Houston, San Antonio) where invited buyers can take delivery of a personal Cybercab (Reuters; delivery city list per Car and Driver). Nov 25, 2026: Tesla's @robotaxi account said the Dallas service area grew wider (new boundary stretches north past University Park toward Farmers Branch, Addison and Richardson), with more cars and lower fares; no new square mileage or fare given (via TeslaNorth). Nov 27, 2026: Robotaxi Tracker measured the Nov 25 expansion at about 150 sq mi, up from ~82 (Richardson-Garland Herald).",
       "sources": [
         "https://www.reuters.com/business/autos-transportation/tesla-rolls-out-robotaxis-dallas-houston-2026-04-18/",
         "https://dallascityhall.com/government/citymanager/Documents/FY25-26%20Memos/Launch%20of%20Tesla%20Robotaxi%20Services.pdf",
@@ -157,7 +162,8 @@
         "https://www.notateslaapp.com/news/5044/tesla-launches-cybercab-rides-in-dallas-with-new-v15-design",
         "https://www.audacy.com/krld/news/local/teslas-cybercab-begins-picking-up-passengers-in-dallas",
         "https://www.notateslaapp.com/news/5055/tesla-expands-dallas-robotaxi-area-by-a-whole-square-mile",
-        "https://teslanorth.com/2026/11/25/tesla-robotaxi-dallas-expansion-lower-fares/"
+        "https://teslanorth.com/2026/11/25/tesla-robotaxi-dallas-expansion-lower-fares/",
+        "https://richardson-garlandherald.com/2026/11/27/tesla-expands-driverless-robotaxi-service-into-south-richardson/"
       ],
       "cybercab_public_since": "2026-11-19"
     },
@@ -564,6 +570,13 @@
       "model_y": 734,
       "cybercab": 822,
       "note": "Texas DMV registry via TeslaNorth (https://teslanorth.com/2026/11/25/tesla-texas-robotaxi-roster-822-cybercabs/, Nov 25), DMV records checked Nov 24 with VINs decoded: 822 Cybercab + 734 Model Y = 1,556; +49 Cybercabs vs Nov 17 (773)."
+    },
+    {
+      "date": "2026-11-26",
+      "total": 1841,
+      "model_y": 734,
+      "cybercab": 1107,
+      "note": "Texas DMV registry via tesladan.me (https://www.tesladan.me/2026/11/tesla-cybercabs-cross-1000-1107-of-1841.html), citing FSD Database / Whole Mars Catalog: 1,107 Cybercab + 734 Model Y = 1,841 as of Nov 26; record +285 Cybercabs vs 822, first time over 1,000."
     }
   ],
   "fleet_sources": [
